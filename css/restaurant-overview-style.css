@@ -1,0 +1,515 @@
+
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+  
+.header #logo-black{
+      position: absolute;
+      top: -5px;
+      left: 25px;
+      width: 200px;
+      height: 200px;
+}
+
+.header .form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h5{
+    font-family: var(--primary-font);
+    margin-top: -10px;
+    font-size: 12px;
+    font-weight: 300;
+    height: 50px;
+    margin-left: 71px;
+    color: gray;
+}
+
+h5 span{
+    color: rgb(187, 185, 185);
+}
+  
+.form-container form{
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    left: 430px;
+    width: 550px;
+    height: 55px;
+    display: flex;
+    border: 1px solid #bbbbbb;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 60px;
+}
+
+.form-container form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: var(--primary-font);
+    color: rgb(74, 73, 73);
+}
+
+.form-container form input::placeholder{
+    color: gray;
+}
+
+ 
+.form-container form button{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    color: white;
+    background-color: #333333;
+}
+
+
+.form-container form .fa-light{
+    align-self: center;
+    padding: 10px 20px;
+    color: gray;
+}
+
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    transition: top 0.5s ease-in-out 0s;
+    z-index: 9999;
+    background-color: white;
+  }
+
+.title-container {
+    margin-left: 70px;
+    margin-top: -35px;
+    display: flex;
+    flex-direction: row;
+    z-index: 9999;
+    background-color: white;
+}
+
+.title-container .name-details{
+    font-family: var(--primary-font);
+}
+
+.title-container .name-details #name{
+    font-size: 35px;
+    font-weight: 600px;
+}
+
+.title-container .name-details #type{
+    font-weight: 300;
+    margin-top: -30px;
+}
+
+.title-container .name-details #location{
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: -10px;
+    color: gray;
+}
+
+.title-container .name-details #details{
+    font-weight: 200;
+    margin-top: -5px;
+    color: gray;
+    font-size: 14px;
+}
+
+.title-container .name-details #details span{
+    color: green;
+}
+
+.sticky .navbar{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--primary-font);
+    font-size: 18px;
+    margin-left: 65px;
+    justify-content: space-around;
+    margin-right: 75px;
+    background-color: white;
+    z-index: 9999;
+}
+
+.section {
+    font-family: var(--primary-font);
+    margin-left:68px;
+}
+
+.active-link {
+    color: rgb(2, 99, 2);
+    font-weight: 500;
+}
+  
+.not-active-link {
+    color: rgb(71, 70, 70);
+}
+
+.sticky .navbar a:hover{
+    color:rgb(2, 99, 2);
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    margin-top:70px;
+    margin-left: 690px;
+    font-family: var(--primary-font);
+}
+
+.rating #stars{
+    background-color: green;
+    color:white;
+    font-weight: 600;
+    border-radius: 7px;
+    height: 25px;
+}
+
+.rating .no-of-reviews{
+    font-size: 13px;
+    margin-left: 7px;
+    margin-top: -3px;
+}
+
+.rating .no-of-reviews #dine-in-reviews{
+    height: 5px;
+    font-weight: 600;
+}
+
+.rating .no-of-reviews p{
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration-style: dotted;
+    text-underline-offset: 5px;
+    color: rgb(103, 103, 103);
+}
+
+#main-line{
+    margin-top: 2px;
+    width: 1123px;
+    background-color: rgb(63, 63, 63);
+    border-color: rgb(63, 63, 63);
+    height: 2px;
+    border: 0;
+}
+
+
+#overview h2{
+    font-size: 23px;
+    font-weight:500;
+    margin-top: 20px;
+}
+
+#overview h3{
+    font-size: 19px;
+    font-weight: 300;
+}
+
+
+#cuisines{
+    display: flex;
+    flex-direction: row;
+    margin-top: -25px;
+    font-weight: 300;
+    font-size: 15px;
+}
+  
+#cuisines p{
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    color: rgb(69, 68, 68);
+}
+
+
+#description {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(57, 56, 56);
+    margin-top: -15px;
+    margin-bottom: 40px;
+}
+  
+.more-info{
+    font-family: var(--primary-font);
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+  
+.more-info .info-sep{
+    margin-right: 250px;
+}
+  
+.more-info .info-sep div{
+    display: flex;
+    flex-direction: row;
+}
+  
+.more-info .info-sep div p{
+    margin-top: -3px;
+    margin-left: 5px;
+}
+
+
+.review-highlights{
+    margin-left: 1px;
+    width: 748px;
+    background-color: #edefed;
+    border-color: #edefed;
+    margin-bottom: 30px;
+    opacity: 25%;
+  }
+  
+  .review-highlights3{
+    margin-left: 20px;
+    width: 1120px;
+    background-color: #edefed;
+    border-color: #edefed;
+    margin-bottom: 30px;
+    opacity: 25%;
+  }
+  
+  .badges{
+    display: flex;
+    flex-direction: row;
+    width:700px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .badges img{
+    width: 100px;
+    height: 100px;
+    margin-top: -10px;
+  }
+  
+  .badges p{
+    font-size: 15px;
+    font-weight: 200;
+    margin-left: 10px;
+  }
+  
+  #other-details{
+    background-color: white;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    box-shadow: 0px 0px 5px rgb(202, 202, 202); 
+    position: absolute;
+    top: 400px;
+    left: 840px;
+  }
+  
+  #other-details img{
+    height: 200px;
+    width: 300px;
+    margin-left: 25px;
+  }
+  
+  .contact{
+    margin-left: 15px;
+  }
+  
+  .contact-content{
+    font-weight: 300;
+    margin-right: 10px;
+  }
+  
+  #number, #social-media{
+    color:green;
+    margin-top: -10px;
+  }
+  
+  #address{
+    color:gray;
+  }
+  
+  .review{
+    background-color: white;
+    border-radius: 10px;
+    width: 700px;
+    height: 330px;
+    margin-bottom: 20px;
+  }
+  
+  .review-detailed{
+    margin-bottom: 40px;
+  }
+  
+  .review .profile{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .review .profile, .rating2, .content{
+    margin-left: 20px;
+  }
+  
+  .review:hover{
+    border: 1px solid rgb(255, 252, 252);
+    box-shadow: 0px 0px 5px rgb(202, 202, 202); 
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  
+  .profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+  }
+  
+  .profile .name-details{
+    margin-left: 15px;
+    margin-top: -15px;
+  }
+  
+  .profile .name-details #name{
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  
+.review .rating2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  
+  .rating2 #rating-num{
+    background-color: green;
+    color:white;
+    font-weight: 500;
+    border-radius: 7px;
+    height: 20px;
+    font-size: 14px;
+  }
+  
+  .rating2 #dine-in2{
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .rating2 #date{
+    margin-left: 10px;
+    color:gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .content #title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  
+  .content .positive-or-negative{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .content .positive-or-negative #preference{
+    font-size: 14px;
+    margin-left: 8px;
+    margin-top: -1px;
+  }
+  
+  .headings{
+    display: flex;
+    flex-direction: row;
+    color: gray;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  .headings p{
+    background-color: rgb(184, 184, 184);
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  
+  #votes-and-comments{
+    margin-left: 20px;
+    color:gray;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  
+  .marks{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 20px;
+    color:rgb(101, 100, 100);
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .marks i{
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .marks p{
+    margin-left: 5px;
+    margin-top: -3px;
+  }
+  
+  .review-highlights{
+    margin-left: 1px;
+    width: 748px;
+    background-color: #edefed;
+    border-color: #edefed;
+    margin-bottom: 30px;
+    opacity: 25%;
+  }
+  
+  .review-highlights2{
+    margin-left: 20px;
+    width: 500px;
+    background-color: #edefed;
+    border-color: #edefed;
+    margin-bottom: 30px;
+    opacity: 25%;
+  }
+  
+  #view-all{
+    font-size: 18px;
+    font-weight: 400;
+    color:  green;
+    cursor: pointer;
+    margin-top: -15px;
+  }
+
+  #view-all-reviews{
+    font-size: 18px;
+    font-weight: 400;
+    color:  rgb(13, 187, 13);
+    cursor: pointer;
+    margin-top: -15px;
+    text-decoration: none;
+  }
+
+  #view-all-reviews:hover{
+    color: darkgreen;
+  }

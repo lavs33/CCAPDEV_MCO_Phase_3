@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/search-style.css">
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+</head>
+
+<div class="header">
+     <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" class="header" />
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+</div>
+
+<h5> Home / DLSU Manila Campus </h5>
+
+<div class="dine-in">
+    <img src="http://localhost:3000/restaurants-page-images/dine-in.png" alt="dine-in-img" id="dine-in-img" />
+    <p id="dine-in-text"> Dine-in </p>
+</div>
+
+<hr id="dine-in-line" />
+<hr id="main-line"/>
+
+<h3 id="search-results">Search results for <em>{{searchTerm}}</em></h3> <br/>
+
+{{#if isFound}} 
+    {{#each restoResultData}}
+        <div class="establishments">
+        <a href="/restaurant-front/{{this._id}}" style="text-decoration:none; color:inherit">
+            <div class="restaurant">
+            <img src="http://localhost:3000/{{this.main_img}}" alt="{{this.name}}-food" />
+                <div class="badges">
+                    {{#each this.badges}}
+                    <p>&nbsp;{{this}}&nbsp;</p>
+                    {{/each}}
+                </div>
+                <div class="name">
+                    <h3>{{this.name}}</h3>
+                    <p id="rating">{{this.overall_rating}} ⁎ </p>
+                </div>
+                    <p class="type">
+                    {{#each this.keywords}}
+                        {{#unless @last}}
+                        {{this}},&nbsp;
+                        {{else}}
+                        {{this}}&nbsp;
+                        {{/unless}}
+                    {{/each}}      
+                    </p>
+            </div>
+        </a>
+        </div>  
+    {{/each}}
+
+{{else}} 
+    <h3 id="none">None</h3>
+{{/if}}

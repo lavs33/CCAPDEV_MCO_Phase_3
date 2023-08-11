@@ -1,0 +1,168 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/restaurant-overview-style.css">
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://localhost:3000/css/with-users-style.css">
+    <script src="http://localhost:3000/script.js"></script>
+    <script src="http://localhost:3000/clickreview.js"></script>
+</head>
+
+<div class="header">
+     <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" class="header" />
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+
+      {{#if userData}}
+        <div class= "navbar">
+            <img src="http://localhost:3000/{{userData.avatar}}" alt="{{userData.avatar}}-profile-img" id="profile=img" />
+            <div class="dropdown2">
+                <button onclick="showDropdownElements()" class="dropbtn">{{userData.username}}</button> 
+                <div id="myDropdown" class="dropdown-content">
+                <a href="/user-profile/{{userData._id}}">Profile</a>
+                <a href="/registerorlogin/logout/{{restoOverviewdata._id}}">Log out</a>
+                </div>
+            </div> 
+        </div>
+     {{/if}}
+</div>
+
+<h5> Home / DLSU Manila Campus / <span> {{restoOverviewdata.name}} </span> / Overview </h5>
+
+
+<div class="sticky">
+        <div class="title-container">
+            <div class="name-details">
+                <p id="name">{{restoOverviewdata.name}}</p>
+                <p id="type">
+                 {{#each restoOverviewdata.keywords}}
+                     {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                     {{/unless}}
+                 {{/each}}
+                </p>
+                <p id="location">{{restoOverviewdata.location_hall}}</p>
+                <p id="details"><span>Opening Hours: </span> {{restoOverviewdata.contact_number}} </p>
+            </div>
+
+            <div class="rating">
+                <p id="stars">&nbsp;{{restoOverviewdata.overall_rating}} ⁕ &nbsp;</p>
+                <div class="no-of-reviews">
+                    <p id ="dine-in-reviews">{{restoOverviewdata.no_of_reviews}} </p>
+                    <p>Dine-in Reviews</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="navbar">
+            <a href="/restaurant-overview/{{restoOverviewdata._id}}" class="active-link">Overview</a>
+            <a href="/restaurant-reviews/{{restoOverviewdata._id}}" class="not-active-link">Reviews</a>
+            <a href="/restaurant-photos/{{restoOverviewdata._id}}" class="not-active-link">Photos</a>
+            <a href="/restaurant-menu/{{restoOverviewdata._id}}" class="not-active-link">Menu</a>
+         </div>
+
+         <hr id="main-line"/>
+
+         
+    <div id="overview" class="section">
+       <div id="summary">
+            <h2>About this place</h2>
+
+            <h3>Cuisines</h3>
+            <div id="cuisines">
+                {{#each restoOverviewdata.keywords}}
+                      <p>&nbsp;&nbsp;{{this}}&nbsp;&nbsp;</p> 
+                 {{/each}}
+            </div>
+
+            <h3>People Say This Place Is Known For</h3>
+            <p id ="description">{{restoOverviewdata.known_for}}</p>
+        
+            <h3>More Info</h3>
+            <div class="more-info">
+                <div class="info-sep"> 
+                    {{#each restoOverviewdata.more_info}}
+                       <div><i class="fas fa-light fa-circle-check" style="color: #3cbe3c;"></i> <p>{{this}}</p></div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div class="establishment-register">
+                <p id="question">Are you the owner of this establishment?</p>
+                <p id="respond"><a href="log-in-for-establishments.html" style="text-decoration: none;" > Respond to reviews on it > </a> </p>
+            </div>
+
+            <hr class="review-highlights"/>
+            <h3>Badges</h3>
+
+           {{#if restoOverviewdata.badges_img.length}}
+               {{#each restoOverviewdata.badges_img}}
+                   <div class="badges">
+                     <img src="http://localhost:3000/{{this}}" alt="{{this}}"/>
+                  </div>
+               {{/each}}
+          {{else}}
+               <div class="no-badges-message">
+                  No badges to display.
+               </div>
+          {{/if}}
+
+            <hr class="review-highlights"/>
+
+            <h3>Top Reviews</h3>
+
+             {{#each topReviews}}
+                <div class="review clickable-review" onclick="navigateToReview('{{../restoOverviewdata._id}}', '{{reviewId}}')">
+                        <div class="profile">
+                            <a href="/user-profile/{{userId}}"><img src="http://localhost:3000/{{userAvatar}}" alt="profile-pic-{{userAvatar}}" /></a>
+                            <div class="name-details">
+                                <p id="name">{{userName}}</p>
+                            </div>
+                        </div>
+                        <div class="rating2">
+                            <p id="rating-num">&nbsp;{{rating}} ⁕&nbsp;</p>
+                            <p id="dine-in2">DINE-IN</p>
+                            <p id="date">{{date_posted_formatted}}</p>
+                        </div>
+
+                        <div class="content">
+                            <p id="title">{{title}}</p>
+                            <div class="positive-or-negative">
+                             {{#if positive}}
+                                <i class="fa-solid fa-thumbs-up" style="color: #38af3a;"></i>
+                                <p id="preference" style="color: #38af3a;">POSITIVE</p>
+                             {{else}}
+                                <i class="fa-solid fa-thumbs-down" style="color: #c72222;"></i>
+                                <p id="preference" style="color: #c72222;">NEGATIVE</p>
+                             {{/if}}
+                            </div>
+                        </div>
+
+                        <div class="headings">
+                            {{#each review_keywords}}
+                                 <p>&nbsp;&nbsp;{{this}}&nbsp;&nbsp;</p>
+                            {{/each}}
+                        </div>
+
+                        <p id="votes-and-comments"><span id="no-of-votes-helpful">{{helpful_no}}</span> votes for helpful, <span id="no-of-votes-unhelpful">{{unhelpful_no}} </span> votes for unhelpful, <span id="no-of-comments">{{comments_no}}</span> comments</p>
+                
+                    
+                        <hr class="review-highlights2"/>
+                </div>
+             {{/each}} 
+            <a href="/restaurant-reviews/{{restoOverviewdata._id}}" id="view-all-reviews"> View all reviews > </a>
+        </div>
+        <div id="other-details">
+            <h3 class="contact">Contact Number</h3>
+            <p id="number" class="contact-content contact">{{restoOverviewdata.contact_number}}</p>
+
+            <h3 class="contact">Address</h3>
+            <img src="http://localhost:3000/{{restoOverviewdata.address_img}}" alt="{{restoOverviewdata.address}}" />
+            <p id="address" class="contact-content contact">{{restoOverviewdata.address}}</p>
+        </div>
+   </div>

@@ -1,0 +1,80 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/restaurant-menu-style.css">
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://localhost:3000/css/with-users-style.css">
+    <script src="http://localhost:3000/script.js"></script>
+</head>
+
+<div class="header">
+     <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" class="header" />
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+
+      {{#if userData}}
+        <div class= "navbar">
+            <img src="http://localhost:3000/{{userData.avatar}}" alt="{{userData.avatar}}-profile-img" id="profile=img" />
+            <div class="dropdown2">
+                <button onclick="showDropdownElements()" class="dropbtn">{{userData.username}}</button> 
+                <div id="myDropdown" class="dropdown-content">
+                <a href="/user-profile/{{userData._id}}">Profile</a>
+                <a href="/registerorlogin/logout/{{restoMenudata._id}}">Log out</a>
+                </div>
+            </div> 
+        </div>
+     {{/if}}
+</div>
+
+<h5> Home / DLSU Manila Campus / <span> {{restoMenudata.name}} </span> / Menu </h5>
+
+<div class="sticky">
+        <div class="title-container">
+            <div class="name-details">
+                <p id="name">{{restoMenudata.name}}</p>
+                <p id="type">
+                 {{#each restoMenudata.keywords}}
+                     {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                     {{/unless}}
+                 {{/each}}
+                </p>
+                <p id="location">{{restoMenudata.location_hall}}</p>
+                <p id="details"><span>Opening Hours: </span> {{restoMenudata.contact_number}} </p>
+            </div>
+
+            <div class="rating">
+                <p id="stars">&nbsp;{{restoMenudata.overall_rating}} ⁕ &nbsp;</p>
+                <div class="no-of-reviews">
+                    <p id ="dine-in-reviews">{{restoMenudata.no_of_reviews}} </p>
+                    <p>Dine-in Reviews</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="navbar">
+            <a href="/restaurant-overview/{{restoMenudata._id}}" class="not-active-link">Overview</a>
+            <a href="/restaurant-reviews/{{restoMenudata._id}}" class="not-active-link">Reviews</a>
+            <a href="/restaurant-photos/{{restoMenudata._id}}" class="not-active-link">Photos</a>
+            <a href="/restaurant-menu/{{restoMenudata._id}}" class="active-link">Menu</a>
+         </div>
+
+         <hr id="main-line"/>
+</div>
+         
+<div id="menu2" class="section">
+        <div id="part3">
+            <p class="name-of-resto">{{restoMenudata.name}} Menu </p> 
+            <div id="menu-photos">
+                {{#each restoMenudata.menu_images}}
+                    <img src="http://localhost:3000/menu-images/{{this}}" alt="{{this}}"/>
+                {{/each}}
+            </div>
+        </div>
+</div>
+

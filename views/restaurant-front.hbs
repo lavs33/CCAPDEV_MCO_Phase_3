@@ -1,0 +1,93 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/restaurant-front-style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/with-users-style.css">
+    <script src="http://localhost:3000/script.js"></script>
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+    <style>
+        .photos .first {
+            background-image: url(http://localhost:3000/restaurant-front-images/{{restoFrontdata.cover_photos.[0]}});
+        }
+
+        .photos .second {
+            background-image: url(http://localhost:3000/restaurant-front-images/{{restoFrontdata.cover_photos.[1]}});
+        }
+
+        .photos .third {
+            background-image: url(http://localhost:3000/restaurant-front-images/{{restoFrontdata.cover_photos.[2]}});
+        }
+    </style>
+</head>
+
+<div class="header">
+     <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" class="header" />
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+    
+     {{#if userData}}
+        <div class= "navbar">
+            <img src="http://localhost:3000/{{userData.avatar}}" alt="{{userData.avatar}}-profile-img" id="profile=img" />
+            <div class="dropdown2">
+                <button onclick="showDropdownElements()" class="dropbtn">{{userData.username}}</button> 
+                <div id="myDropdown" class="dropdown-content">
+                <a href="/user-profile/{{userData._id}}">Profile</a>
+                <a href="/registerorlogin/logout/{{restoFrontdata._id}}">Log out</a>
+                </div>
+            </div> 
+        </div>
+     {{/if}}
+</div>
+
+<h5> Home / DLSU Manila Campus / <span> {{restoFrontdata.name}} </span></h5>
+
+
+<div class="photos">
+        <div class="first"> </div>
+        <img src="http://localhost:3000/restaurant-front-images/{{restoFrontdata.cover_photos.[0]}}" alt="{{restoFrontdata.name}}-food" id="p1" />
+        <div class="right-part">
+            <div class="second"> </div>
+            <img src = "http://localhost:3000/restaurant-front-images/{{restoFrontdata.cover_photos.[1]}}" alt="{{restoFrontdata.name}}-food" id="p2" />
+            <div class="third"> </div>
+            <img src = "http://localhost:3000/restaurant-front-images/{{restoFrontdata.cover_photos.[2]}}" alt="{{restoFrontdata.name}}-food" id="p3"/>
+        </div>
+</div>
+
+<div class="sticky">
+        <div class="title-container">
+            <div class="name-details">
+                <p id="name">{{restoFrontdata.name}}</p>
+                <p id="type">
+                 {{#each restoFrontdata.keywords}}
+                     {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                     {{/unless}}
+                 {{/each}}
+                </p>
+                <p id="location">{{restoFrontdata.location_hall}}</p>
+                <p id="details"><span>Opening Hours: </span> {{restoFrontdata.contact_number}} </p>
+            </div>
+
+            <div class="rating">
+                <p id="stars">&nbsp;{{restoFrontdata.overall_rating}} ⁕ &nbsp;</p>
+                <div class="no-of-reviews">
+                    <p id ="dine-in-reviews">{{restoFrontdata.no_of_reviews}} </p>
+                    <p>Dine-in Reviews</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="navbar">
+            <a href="/restaurant-overview/{{restoFrontdata._id}}" class="not-active-link">Overview</a>
+            <a href="/restaurant-reviews/{{restoFrontdata._id}}" class="not-active-link">Reviews</a>
+            <a href="/restaurant-photos/{{restoFrontdata._id}}" class="not-active-link">Photos</a>
+            <a href="/restaurant-menu/{{restoFrontdata._id}}" class="not-active-link">Menu</a>
+         </div>
+
+         <hr id="main-line"/>
+</div> 

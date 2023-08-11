@@ -1,0 +1,14 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/footer-style.css">
+</head>
+
+<div class = "footer">
+    <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" />
+    <ul class="footer_list">
+        {{#each links}}
+            <li><a href="{{link}}">{{linkTitle}}</a></li>
+        {{/each}}
+    </ul>
+    <hr />
+    <p id = "closing"> 2023 © TaftFinds™ Ltd. All rights reserved. </p>
+</div>

@@ -1,0 +1,180 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/search-reviews-style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/with-users-style.css">
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+    <script src="http://localhost:3000/script.js"></script>
+</head>
+
+<div class="header">
+    <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" class="header" />
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+
+    {{#if userData}}
+        <div class= "navbar">
+            <img src="http://localhost:3000/{{userData.avatar}}" alt="{{userData.avatar}}-profile-img" id="profile=img" />
+            <div class="dropdown2">
+                <button onclick="showDropdownElements()" class="dropbtn">{{userData.username}}</button> 
+                <div id="myDropdown" class="dropdown-content">
+                <a href="/user-profile/{{userData._id}}">Profile</a>
+                <a href="/registerorlogin/logout/{{restaurantData._id}}">Log out</a>
+                </div>
+            </div> 
+        </div>
+     {{/if}}
+</div>
+
+<h5> Home / DLSU Manila Campus / <span> {{restaurantData.name}} </span> / Reviews </h5>
+
+
+<div class="sticky">
+        <div class="title-container">
+            <div class="name-details">
+                <p id="name">{{restaurantData.name}}</p>
+                <p id="type">
+                 {{#each restaurantData.keywords}}
+                     {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                     {{/unless}}
+                 {{/each}}
+                </p>
+                <p id="location">{{restaurantData.location_hall}}</p>
+                <p id="details"><span>Opening Hours: </span> {{restaurantData.contact_number}} </p>
+            </div>
+
+            <div class="rating">
+                <p id="stars">&nbsp;{{restaurantData.overall_rating}} ⁕ &nbsp;</p>
+                <div class="no-of-reviews">
+                    <p id ="dine-in-reviews">{{restaurantData.no_of_reviews}} </p>
+                    <p>Dine-in Reviews</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="navbar">
+            <a href="/restaurant-overview/{{restaurantData._id}}" class="not-active-link">Overview</a>
+            <a href="/restaurant-reviews/{{restaurantData._id}}" class="active-link">Reviews</a>
+            <a href="/restaurant-photos/{{restaurantData._id}}" class="not-active-link">Photos</a>
+            <a href="/restaurant-menu/{{restaurantData._id}}" class="not-active-link">Menu</a>
+         </div>
+
+         <hr id="main-line"/>
+ </div>
+
+   <div id="reviews" class="section">
+        <div id="part1">
+            <p class="name-of-resto">{{restaurantData.name}} Reviews</p>
+            <div id="all-filters">
+                <div class="form-container2">
+                    <form action="http://localhost:3000/search-reviews-results/{{restaurantData._id}}" method="POST">
+                    <i class="fas fa-light fa-magnifying-glass"></i>   
+                    <input type="text" name="searchQuery" placeholder="Search for reviews">
+                    <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <h3 id="search-results">Search results for <em>{{searchQuery}}</em></h3> <br/>
+
+            {{#if searchReviewsResults.length}}
+             {{#each searchReviewsResults}}
+                <div class="review-detailed">
+                     <div class="profile">
+                            <img src="http://localhost:3000/{{userAvatar}}" alt="{{userAvatar}}" />
+                            <div class="name-details">
+                                <p id="name">{{userName}}</p>
+                            </div>
+                     </div>
+                    <div class="rating2">
+                            <p id="rating-num">&nbsp;{{rating}} ⁕&nbsp;</p>
+                            <p id="dine-in2">DINE-IN</p>
+                            <p id="date">{{date_posted_formatted}}</p>
+                    </div>
+
+                     <div class="content">
+                            <p id="title">{{title}}</p>
+                            <div class="positive-or-negative">
+                             {{#if positive}}
+                                <i class="fa-solid fa-thumbs-up" style="color: #38af3a;"></i>
+                                <p id="preference" style="color: #38af3a;">POSITIVE</p>
+                             {{else}}
+                                <i class="fa-solid fa-thumbs-down" style="color: #c72222;"></i>
+                                <p id="preference" style="color: #c72222;">NEGATIVE</p>
+                             {{/if}}
+                            </div>
+                     </div>
+
+                     <div class="headings">
+                            {{#each review_keywords}}
+                                 <p>&nbsp;&nbsp;{{this}}&nbsp;&nbsp;</p>
+                            {{/each}}
+                     </div>
+
+                    <div class="review-content">
+                        <p>{{body}}</p>
+                    </div>
+
+
+                    <div class="review-photos">
+                        {{#if review_images}}
+                            {{#each review_images}}
+                                <img src="http://localhost:3000/{{this}}" alt="{{this}}" />
+                            {{/each}}
+                        {{/if}}
+
+                        {{#if review_videos}}
+                            {{#each review_videos}}
+                                <video controls>
+                                    <source src="http://localhost:3000/{{this}}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            {{/each}}
+                        {{/if}}
+
+                        {{#unless review_images}}
+                            {{#unless review_videos}}
+                                <p>No photos or videos available.</p>
+                            {{/unless}}
+                        {{/unless}}
+                    </div>
+
+                    <p id="votes-and-comments"><span id="no-of-votes-helpful">{{helpful_no}}</span> votes for helpful, <span id="no-of-votes-unhelpful">{{unhelpful_no}} </span> votes for unhelpful, <span id="no-of-comments">{{comments_no}}</span> comments</p>
+            
+                    <p class="log-in-tag"> You must be register/log-in to interact with the reviews.</p>
+    
+                    <hr class="review-highlights2"/>
+
+                    
+                    <p class="label-for-comments"> Comments </p>
+
+                        {{#if comments.length}}
+                            <div class="comments">
+                                {{#each comments}}
+                                <div class="comment-profile">
+                                    <img src="http://localhost:3000/{{commentUserAvatar}}" alt="{{commentUserName}}" />
+                                    <p id="commentor">{{commentUserName}}</p>
+                                    <hr />
+                                    <div>
+                                        <p id="comment">{{content}}</p>
+                                        <p id="sent-details">Sent {{date_commented_formatted}}</p>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{else}}
+                            <p id = "no-comments">No comments</p>
+                        {{/if}}
+                   </div>
+             {{/each}}
+           {{else}}
+                 <h3 id="none">None</h3>
+           {{/if}}
+        </div>
+    </div>

@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/restaurant-photos-style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/with-users-style.css">
+    <script src="http://localhost:3000/script.js"></script>
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+</head>
+
+<div class="header">
+     <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" class="header" />
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+      {{#if userData}}
+        <div class= "navbar">
+            <img src="http://localhost:3000/{{userData.avatar}}" alt="{{userData.avatar}}-profile-img" id="profile=img" />
+            <div class="dropdown2">
+                <button onclick="showDropdownElements()" class="dropbtn">{{userData.username}}</button> 
+                <div id="myDropdown" class="dropdown-content">
+                <a href="/user-profile/{{userData._id}}">Profile</a>
+                <a href="/registerorlogin/logout/{{restoPhotosdata._id}}">Log out</a>
+                </div>
+            </div> 
+        </div>
+     {{/if}}
+</div>
+
+<h5> Home / DLSU Manila Campus / <span> {{restoPhotosdata.name}} </span> / Photos </h5>
+
+<div class="sticky">
+        <div class="title-container">
+            <div class="name-details">
+                <p id="name">{{restoPhotosdata.name}}</p>
+                <p id="type">
+                 {{#each restoPhotosdata.keywords}}
+                     {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                     {{/unless}}
+                 {{/each}}
+                </p>
+                <p id="location">{{restoPhotosdata.location_hall}}</p>
+                <p id="details"><span>Opening Hours: </span> {{restoPhotosdata.contact_number}} </p>
+            </div>
+
+            <div class="rating">
+                <p id="stars">&nbsp;{{restoPhotosdata.overall_rating}} ⁕ &nbsp;</p>
+                <div class="no-of-reviews">
+                    <p id ="dine-in-reviews">{{restoPhotosdata.no_of_reviews}} </p>
+                    <p>Dine-in Reviews</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="navbar">
+            <a href="/restaurant-overview/{{restoPhotosdata._id}}" class="not-active-link">Overview</a>
+            <a href="/restaurant-reviews/{{restoPhotosdata._id}}" class="not-active-link">Reviews</a>
+            <a href="/restaurant-photos/{{restoPhotosdata._id}}" class="active-link">Photos</a>
+            <a href="/restaurant-menu/{{restoPhotosdata._id}}" class="not-active-link">Menu</a>
+         </div>
+
+         <hr id="main-line"/>
+</div>
+         
+<div id="photos" class="section">
+        <div>
+            <div id="part2">
+                <p class="name-of-resto">{{restoPhotosdata.name}} Photos</p>
+                <p class="img-category">&nbsp;All (<span id="num">3</span>)&nbsp;</p>
+                <div class="images-set">
+                    {{#each restoPhotosdata.cover_photos}}
+                        <img src="http://localhost:3000/restaurant-front-images/{{this}}" alt="{{this}}"/>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+</div>
+

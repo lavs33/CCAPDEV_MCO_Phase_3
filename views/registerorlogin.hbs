@@ -1,0 +1,70 @@
+
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/registerorlog-in-style.css">
+</head>
+    <div class="cover">
+        <img src="http://localhost:3000/cover-photo.png" alt="cover-photo" id="cover-photo"/>
+        <div class= "navbar">
+            <a href="#divTwo" class="button">Log in</a>
+            <a href="#divOne" class="button">Register</a>
+        </div>
+        
+        <div class="overlay" id="divOne">
+            <div class="wrapper">
+                <h2>Register</h2><a class="close" href="#">&times;</a>
+                <div class="content">
+                    <div class="sign-in-container">
+                        <form action="http://localhost:3000/registerorlogin/registered/{{LoginData._id}}" method="post">
+                            <label>Username</label>
+                            <input placeholder="Username" type="text"  id="username1" name="username"  required>
+                            <label>Password</label>
+                            <input placeholder="Password" type="password"  id="password1" name="password" required>
+                            <label>Confirm Password</label>
+                            <input placeholder="Confirm Password" type="password" id="confirm_password" name="confirm_password" required>       
+                            <label>Description</label> 
+                            <textarea placeholder="Describe yourself..." id="description" name="description"></textarea>
+                            <label>Avatar
+                                <input type="file" name="image" accept="image/png, image/gif, image/jpeg" id="image-file" required />
+                            </label>
+                            <input type="submit" value="Create account"> 
+                        </form>
+                        <hr class="border"/>
+                        <label id="existing-account">Already have an account?&nbsp;</label><a href="#divTwo" class="existing-account-log-in">Log in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="divTwo">
+            <div class="wrapper">
+                <h2>Log In</h2><a class="close" href="#">&times;</a>
+                <div class="content">
+                    <div class="sign-in-container">
+                        <form action="http://localhost:3000/registerorlogin/login/{{LoginData._id}}" method="post">
+                            <label>Username</label>
+                            <input placeholder="Username" type="text" id="username2" name="username2" required>
+                            <label>Password</label>
+                            <input placeholder="Password" type="password" id="password2" name="password2"  required>
+                            <input type="submit" value="Log-in"> 
+                        </form>
+                        <hr class="border"/>
+                        <label id="existing-account">New to TaftFinds?&nbsp;</label><a href="#divOne" class="existing-account-log-in">Create Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const message = "{{message}}";
+        const redirectUrl = "{{redirectUrl}}";
+
+        if (message) {
+            alert(message);
+        }
+
+        if (redirectUrl) {
+            window.location.href = redirectUrl;
+        }
+
+    </script>

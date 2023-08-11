@@ -1,0 +1,247 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/restaurants-style.css">
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+</head>
+
+ <div class="header">
+        <img src="restaurants-page-images/cover-img.jpg" alt="Cover Image" id="cover-img" class="header" />
+        <img src ="restaurants-page-images/logo-white.png" alt="logo" id="logo-white" class="header" />
+        <p id="description" class="header">Find the best restaurants, and food or cuisine, <br/> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspin DLSU Manila Campus</p>
+ </div>
+
+    <p id="restos-descrip"> Engage yourself in a food trip with your friends! </p>
+    <hr id="engage"/>
+
+    
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+
+    <h5> Home / DLSU Manila Campus </h5>
+
+     <div class="dine-in">
+        <img src="restaurants-page-images/dine-in.png" alt="dine-in-img" id="dine-in-img" />
+        <p id="dine-in-text"> Dine-in </p>
+    </div>
+
+    <hr id="dine-in-line" />
+    <hr id="main-line"/>
+
+    <div class="sticky">
+        <button id="filters"><i class="fas fa-sharp fa-light fa-filter"></i>Filter</button>
+
+        <div id="filters-section" class="hidden">
+          <form id="filter-form" action="http://localhost:3000/filter-restaurants/results" method="POST">
+              <label for="min-rating-filter" class="label-rating-filter">Min Rating:</label>
+              <input type="range" id="min-rating-filter" name="minRating" min="1" max="5" step="1" value="1">
+              <div class="rating-labels">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                  <span>4</span>
+                  <span>5</span>
+              </div>
+
+                        
+              <label for="max-rating-filter" class="label-rating-filter">Max Rating:</label>
+              <input type="range" id="max-rating-filter" name="maxRating" min="1" max="5" step="1" value="5">
+              <div class="rating-labels">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+
+              <button type="submit" id = "apply-filter-btn">Apply Filter</button>
+          </form>
+        </div>
+   </div>
+
+
+    <div class="establishments">
+        <a href="/restaurant-front/{{restodata.[0]._id}}">
+        <div class="restaurant">
+            <img src="{{ restodata.[0].main_img }}" alt="{{restodata.[0].name}}-food"/>
+            <div class="badges">
+                {{#each restodata.[0].badges}}
+                  <p>&nbsp;{{this}}&nbsp;</p>
+                {{/each}}
+            </div>
+            <div class="name">
+                <h3>{{restodata.[0].name}}</h3>
+                <p id="rating-{{restodata.[0].name}}">{{restodata.[0].overall_rating}} ⁎ </p>
+            </div>
+            <div class="type">
+                <p>
+                {{#each restodata.[0].keywords}}
+                  {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                  {{/unless}}
+                {{/each}}
+                  </p>
+            </div>
+        </div>
+        </a>
+
+        <a href="/restaurant-front/{{restodata.[1]._id}}">
+        <div class="restaurant">
+            <img src="{{ restodata.[1].main_img }}" alt="{{restodata.[1].name}}-food"/>
+            <div class="badges">
+                {{#each restodata.[1].badges}}
+                  <p>&nbsp;{{this}}&nbsp;</p>
+                {{/each}}
+            </div>
+            <div class="name">
+                <h3>{{restodata.[1].name}}</h3>
+                <p id="rating-{{restodata.[1].name}}">{{restodata.[1].overall_rating}} ⁎ </p>
+            </div>
+            <div class="type">
+                <p>
+                {{#each restodata.[1].keywords}}
+                   {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                  {{/unless}}
+                {{/each}}
+                  </p>
+            </div>
+        </div>
+        </a>
+
+        <a href="/restaurant-front/{{restodata.[2]._id}}">
+        <div class="restaurant">
+            <img src="{{ restodata.[2].main_img }}" alt="{{restodata.[2].name}}-food" />
+            <div class="badges">
+                {{#each restodata.[2].badges}}
+                  <p>&nbsp;{{this}}&nbsp;</p>
+                {{/each}}
+            </div>
+            <div class="name">
+                <h3>{{restodata.[2].name}}</h3>
+                <p id="rating-{{restodata.[2].name}}">{{restodata.[2].overall_rating}} ⁎ </p>
+            </div>
+            <div class="type">
+                <p>
+                {{#each restodata.[2].keywords}}
+                   {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                  {{/unless}}
+                {{/each}}
+                  </p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+    
+    <div class="establishments">
+        <a href="/restaurant-front/{{restodata.[3]._id}}">
+        <div class="restaurant">
+            <img src="{{ restodata.[3].main_img }}" alt="{{restodata.[3].name}}-food"/>
+            <div class="badges">
+                {{#each restodata.[3].badges}}
+                  <p>&nbsp;{{this}}&nbsp;</p>
+                {{/each}}
+            </div>
+            <div class="name">
+                <h3>{{restodata.[3].name}}</h3>
+                <p id="rating-{{restodata.[3].name}}">{{restodata.[3].overall_rating}} ⁎ </p>
+            </div>
+            <div class="type">
+                <p>
+                {{#each restodata.[3].keywords}}
+                   {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                  {{/unless}}
+                {{/each}}
+                  </p>
+            </div>
+        </div>
+        </a>
+
+        <a href="/restaurant-front/{{restodata.[4]._id}}">
+        <div class="restaurant">
+            <img src="{{ restodata.[4].main_img }}" alt="{{restodata.[4].name}}-food"/>
+            <div class="badges">
+                {{#each restodata.[4].badges}}
+                  <p>&nbsp;{{this}}&nbsp;</p>
+                {{/each}}
+            </div>
+            <div class="name">
+                <h3>{{restodata.[4].name}}</h3>
+                <p id="rating-{{restodata.[4].name}}">{{restodata.[4].overall_rating}} ⁎ </p>
+            </div>
+            <div class="type">
+                <p>
+                {{#each restodata.[4].keywords}}
+                   {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                   {{/unless}} 
+                {{/each}}
+                  </p>
+            </div>
+        </div>
+        </a>
+
+        <a href="/restaurant-front/{{restodata.[5]._id}}">
+        <div class="restaurant">
+            <img src="{{ restodata.[5].main_img }}" alt="{{restodata.[5].name}}-food" />
+            <div class="badges">
+                {{#each restodata.[5].badges}}
+                  <p>&nbsp;{{this}}&nbsp;</p>
+                {{/each}}
+            </div>
+            <div class="name">
+                <h3>{{restodata.[5].name}}</h3>
+                <p id="rating-{{restodata.[5].name}}">{{restodata.[5].overall_rating}} ⁎ </p>
+            </div>
+            <div class="type">
+                <p>
+                {{#each restodata.[5].keywords}}
+                   {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                  {{/unless}}
+                {{/each}}
+                  </p>
+            </div>
+        </div>
+        </a>
+    </div>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const filtersBtn = document.getElementById('filters');
+        const filtersSection = document.getElementById('filters-section');
+
+        let isFiltersVisible = false;
+
+        function toggleFilters() {
+          if (isFiltersVisible) {
+            filtersSection.style.display = 'none';
+          } 
+          
+          else {
+            filtersSection.style.display = 'block';
+          }
+          isFiltersVisible = !isFiltersVisible;
+        }
+
+        filtersBtn.addEventListener('click', toggleFilters);
+      });
+  </script>

@@ -1,0 +1,390 @@
+
+.header #logo-white{
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    width: 200px;
+    height: 200px;
+}
+  
+.header .navbar{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.header .navbar a{
+    text-decoration: none;
+    font-family: var(--primary-font);
+    color: white;
+    font-size: 17px;
+    padding: 30px;
+    padding: 20px 20px;
+    position: relative;
+}
+  
+.header .navbar a:after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+  
+.header .navbar a:hover {
+    color: #173518;
+    text-shadow: 0 0 5px white;
+}
+  
+.header .navbar a:hover:after{
+    width: 100%;
+}
+  
+.header #dlsu-foods{
+    width:100%;
+    height: 100%;
+    filter: brightness(60%);
+}
+  
+.header #description{
+    position: absolute;
+    top: 80%;
+    left: 58%;
+    transform: translate(-50%, -90%);
+    color:white;
+    font-family: var(--primary-font);
+    font-size: 75px;
+    width: 100%;
+    font-weight: 500;
+}
+  
+.header #scroll{
+    position: absolute;
+    top: 95%;
+    left: 90%;
+    transform: translate(-50%, -100%);
+    color:white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    width: 100%;
+    margin-top: 30px;
+    text-decoration: none;
+}
+  
+.header #scroll:hover{
+    text-shadow: 0 0 10px #173518;
+}
+  
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 130px;
+    margin-left:5px;
+}
+  
+.column{
+    margin-left: 10px;
+}
+  
+#variety{
+    background-image: url("http://localhost:3000/front-images/variety.jpg");
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 0.5s ease-out;
+}
+  
+#affordability{
+    background-image: url("http://localhost:3000/front-images/affordability.jpg");
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 0.5s ease-out;
+}
+  
+ #standard{
+    background-image: url("http://localhost:3000/front-images/standard.jpg");
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 0.5s ease-out;
+}
+  
+#taste{
+    background-image: url("http://localhost:3000/front-images/taste.jpg");
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 0.5s ease-out;
+}
+  
+.card{
+    border:1px solid greenyellow;
+    height: 400px;
+    width: 300px;
+    position: relative;
+    background: #006400;
+    transition: all 0.3s ease-out;
+}
+  
+.card:hover{
+    border-radius: 50px;
+}
+  
+.card:hover #variety, .card:hover #affordability, .card:hover #standard, .card:hover #taste{
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+  
+.card:hover .description{
+    transform: translateY(0%);
+    opacity: 1;
+}
+  
+.card .description-wrap{
+    padding: 105px 30px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.card .description{
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1;
+    transition: all 0.5s ease-out;
+    overflow-x: auto;
+    transform: translateY(100%);
+    opacity: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+  
+.card .description > *{
+    width: 100%;
+}
+  
+.card .description h3{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: var(--primary-font);
+}
+  
+  
+.card .description p{
+    font-size: 16px;
+}
+  
+.card .description span{
+    color: greenyellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 75px;
+}
+  
+.bio{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: var(--primary-font);
+    margin-left: 50px;
+}
+  
+.bio #dlsu-img{
+    width:700px;
+    height:500px;
+    border-radius:30px;
+    margin-right: 50px;
+}
+  
+.bio hr{
+    width: 110px;
+    height: 3px;
+    background-color: green;
+    border-color: green;
+    text-align: left;
+    float: left;
+    margin-top: -30px;
+}
+  
+.bio hr, h1, p{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+  
+.bio h1{
+    margin-top: -10px;
+    font-size: 50px;
+    font-weight: 400;
+}
+  
+.bio p{
+    margin-top: -20px;
+    font-size: 15px;
+    font-weight: 200;
+}
+  
+.article{
+    cursor: pointer;
+}
+  
+.articles h1, h3{
+    margin-left: 95px;
+}
+  
+.articles h1{
+    margin-top: 70px;
+    font-size: 45px;
+    font-weight: 500;
+    font-family: var(--primary-font);
+}
+  
+.articles h3{
+    margin-top: -30px;
+    font-size: 15px;
+    font-weight: 200;
+    font-family: var(--primary-font);
+}
+  
+.articles-layout{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 55px;
+    justify-content: space-evenly;
+}
+  
+.articles-layout .article{
+    width: 340px;
+}
+  
+.article img{
+    width: 340px;
+    height: 200px;
+    border-radius: 10px;
+}
+  
+.article .published-info{
+    text-align: left;
+    margin: auto;
+    margin-top: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    color:gray;
+    font-weight: lighter;
+}
+  
+.article .title{
+    margin:auto;
+    margin-top: 12px;
+    font-family: var(--primary-font);
+    font-weight: 300;
+}
+  
+.article .article-description{
+    margin: auto;
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: var(--primary-font);
+}
+  
+.grid{
+    margin-top: 120px;
+}
+  
+.grid img{
+    border-radius: 10px;
+}
+  
+.grid .img1{
+    width: 800px;
+    height: 400px;
+}
+  
+.grid h3{
+    font-size: 35px;
+    font-family: var(--primary-font);
+    font-weight: 300;
+}
+  
+.grid .lower-grid{
+    margin-top: 10px;
+    margin-left: 90px;
+}
+  
+.grid .lower-grid .img1{
+    margin-left: 10px;
+}
+  
+.grid .upper-grid, .lower-grid{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+  
+.grid .double-grid{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+  
+.grid .double-grid .img2, .img3{
+    width: 300px;
+    height: 195px;
+}
+  
+.grid .double-grid .img3{
+    margin-top: 10px;
+}
+  
+.blogs{
+    text-decoration: none;
+    color: black;
+}
+  
+.blogs h3:hover{
+    color: green;
+}
+  
+.blogs:visited{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,88 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/user-profile-style.css">
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+    <script src="http://localhost:3000/script.js"></script>
+    <script src="http://localhost:3000/clickreview.js"></script>
+</head>
+
+
+ <a href="/user-profile/{{userProfileData._id}}" id="back-link"> < Back to User Profile </a>
+
+ <h2 class = "tag"> All Reviews </h2>
+
+ {{#if userReviews.length}}
+    {{#each userReviews}}
+                <h2> <a href="/restaurant-front/{{restaurant_id._id}}"> For {{restaurant_id.name}} </a> </h2>
+
+                <div class="review clickable-review" onclick="navigateToReview('{{restaurant_id._id}}', '{{_id}}')">
+                            <div class="profile">
+                                <a href="/user-profile/{{../userProfileData._id}}">
+                                    <img src="http://localhost:3000/{{../userProfileData.avatar}}" alt="profile-pic-{{../userProfileData.avatar}}" />
+                                </a>
+                                <div class="name-details">
+                                    <p id="name">{{../userProfileData.username}}</p>
+                                </div>
+                            </div>
+                            <div class="rating2">
+                                <p id="rating-num">&nbsp;{{rating}} ⁕&nbsp; </p>
+                                <p id="dine-in2">DINE-IN </p>
+                                <p id="date">{{date_posted_formatted}} </p>
+                            </div>
+
+                            <div class="content">
+                                <p id="title">{{title}} </p>
+                                <div class="positive-or-negative">
+                                {{#if positive}}
+                                    <i class="fa-solid fa-thumbs-up" style="color: #38af3a;"></i>
+                                    <p id="preference" style="color: #38af3a;">POSITIVE</p>
+                                {{else}}
+                                    <i class="fa-solid fa-thumbs-down" style="color: #c72222;"></i>
+                                    <p id="preference" style="color: #c72222;">NEGATIVE</p>
+                                {{/if}}
+                                </div>
+                            </div>
+
+                            <div class="headings">
+                                {{#each review_keywords}}
+                                    <p>&nbsp;&nbsp;{{this}}&nbsp;&nbsp;</p>
+                                {{/each}}
+                            </div>
+
+                            <p id="votes-and-comments"><span id="no-of-votes-helpful">{{helpful_no}}</span> votes for helpful, <span id="no-of-votes-unhelpful">{{unhelpful_no}} </span> votes for unhelpful, <span id="no-of-comments">{{comments_no}}</span> comments</p>
+                    
+                        
+                            <hr class="review-highlights2"/>
+                </div>
+
+                {{#if isOwnProfile}}
+                    <a href=" "> Delete Review </a>
+                {{/if}}
+    {{/each}} 
+{{else}}
+    <h3 id="none">No reviews available.</h3>
+{{/if}}
+
+
+ <h2 class = "tag"> All Comments </h2>
+
+ {{#if userComments.length}}
+    {{#each userComments}}
+        <h2> <a href="/restaurant-front/{{review_id.restaurant_id._id}}"> For {{review_id.restaurant_id.name}} </a> </h2>
+
+        <div class="comment clickable-review" onclick="navigateToReview('{{review_id.restaurant_id._id}}', '{{review_id._id}}')">
+            <div class="comment-profile">
+                <img src="http://localhost:3000/{{../userProfileData.avatar}}" alt="{{../userProfileData.username}}" />
+                <p id="commentor">{{../userProfileData.username}}</p>
+                <hr />
+                <div>
+                    <p id="comment">{{content}}</p>
+                    <p id="sent-details">Sent {{date_commented_formatted}}</p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+{{else}}
+    <h3 id="none">No comments available.</h3>
+{{/if}}
+
+

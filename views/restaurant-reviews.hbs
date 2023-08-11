@@ -1,0 +1,262 @@
+<head>
+    <link rel="stylesheet" href="http://localhost:3000/css/restaurant-reviews-style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/with-users-style.css">
+    <script src="https://kit.fontawesome.com/32393e27dc.js" crossorigin="anonymous"></script>
+    <script src="http://localhost:3000/script.js"></script>
+    <script src="http://localhost:3000/clickreview.js"></script>
+</head>
+
+<div class="header">
+     <img src="http://localhost:3000/logo/logo-black.png" alt="logo" class="logo-black" class="header" />
+    <div class="form-container">
+        <form action="http://localhost:3000/search-food/results" method="POST">
+            <i class="fas fa-light fa-magnifying-glass"></i>
+            <input type="text" name="searchTerm" placeholder="Search for a restaurant, cuisine or a dish">
+            <button type="submit"> Search </button>
+        </form>
+    </div>
+
+     {{#if userData}}
+        <div class= "navbar">
+            <img src="http://localhost:3000/{{userData.avatar}}" alt="{{userData.avatar}}-profile-img" id="profile=img" />
+            <div class="dropdown2">
+                <button onclick="showDropdownElements()" class="dropbtn">{{userData.username}}</button> 
+                <div id="myDropdown" class="dropdown-content">
+                <a href="/user-profile/{{userData._id}}">Profile</a>
+                <a href="/registerorlogin/logout/{{restoReviewsdata._id}}">Log out</a>
+                </div>
+            </div> 
+        </div>
+     {{/if}}
+</div>
+
+<h5> Home / DLSU Manila Campus / <span> {{restoReviewsdata.name}} </span> / Reviews </h5>
+
+
+<div class="sticky">
+        <div class="title-container">
+            <div class="name-details">
+                <p id="name">{{restoReviewsdata.name}}</p>
+                <p id="type">
+                 {{#each restoReviewsdata.keywords}}
+                     {{#unless @last}}
+                       {{this}},&nbsp;
+                     {{else}}
+                       {{this}}&nbsp;
+                     {{/unless}}
+                 {{/each}}
+                </p>
+                <p id="location">{{restoReviewsdata.location_hall}}</p>
+                <p id="details"><span>Opening Hours: </span> {{restoReviewsdata.contact_number}} </p>
+            </div>
+
+            <div class="rating">
+                <p id="stars">&nbsp;{{restoReviewsdata.overall_rating}} ⁕ &nbsp;</p>
+                <div class="no-of-reviews">
+                    <p id ="dine-in-reviews">{{restoReviewsdata.no_of_reviews}} </p>
+                    <p>Dine-in Reviews</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="navbar">
+            <a href="/restaurant-overview/{{restoReviewsdata._id}}" class="not-active-link">Overview</a>
+            <a href="/restaurant-reviews/{{restoReviewsdata._id}}" class="active-link">Reviews</a>
+            <a href="/restaurant-photos/{{restoReviewsdata._id}}" class="not-active-link">Photos</a>
+            <a href="/restaurant-menu/{{restoReviewsdata._id}}" class="not-active-link">Menu</a>
+         </div>
+
+         <hr id="main-line"/>
+ </div>
+
+   <div id="reviews" class="section">
+        <div id="part1">
+            <p class="name-of-resto">{{restoReviewsdata.name}} Reviews</p>
+            <div id="all-filters">
+
+                <select class="dropdown-reviews-filters dropdown-reviews-filter1">
+                    <option selected value="all-reviews">  All Reviews </option>
+                </select> 
+
+                <div class="form-container2">
+                   <form action="http://localhost:3000/search-reviews-results/{{restoReviewsdata._id}}" method="POST">
+                    <i class="fas fa-light fa-magnifying-glass"></i>   
+                    <input type="text" name="searchQuery" placeholder="Search for reviews">
+                    <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+
+            {{#if userData}}
+                <p id="create-review-tag"> Create a review</p>
+
+                <form id="review-form" action="http://localhost:3000/restaurant-reviews/create-review/{{restoReviewsdata._id}}" method="POST">
+                    <label style="color:green;"> Title </label> <br>
+                    <textarea name="reviewTitle" placeholder="Title of Review" rows="2" cols="40" required></textarea><br>
+                    <label style="color:green;"> Keyword 1 </label> <br>
+                    <textarea name="reviewKeyword1" placeholder="Keyword" rows="1" cols="50" required></textarea><br>
+                    <label style="color:green;"> Keyword 2 </label> <br>
+                    <textarea name="reviewKeyword2" placeholder="Keyword" rows="1" cols="50" required></textarea><br>
+                    <label style="color:green;"> Keyword 3 </label> <br>
+                    <textarea name="reviewKeyword3" placeholder="Keyword" rows="1" cols="50" required></textarea><br>
+                    <label style="color:green;"> Body </label> <br>
+                    <textarea name="reviewBody" placeholder="Body of Review" rows="7" cols="80" required></textarea><br>
+                    <label style="color:green;"> Positive or Negative </label> <br>
+                        <input type="radio" id="positive" name="posOrNeg" value="Positive">
+                        <label for="Positive">POSITIVE</label>
+                        <input type="radio" id="negative" name="posOrNeg" value="Negative">
+                        <label for="Negative">NEGATIVE</label><br>
+                    <label style="color:green;"> Rating </label> <br>
+                        <input type="radio" id="5" name="ratingStars" value="5" required>
+                        <label for="5">5</label><br>
+                        <input type="radio" id="4" name="ratingStars" value="4">
+                        <label for="4">4</label><br>
+                        <input type="radio" id="3"  name="ratingStars" value="4">
+                        <label for="3">3</label><br>
+                        <input type="radio" id="2"  name="ratingStars" value="2">
+                        <label for="2">2</label><br>
+                        <input type="radio" id="1"  name="ratingStars" value="1">
+                        <label for="1">1</label><br>
+                    <label style="color:green;"> Insert images (maximum of 5) </label> <br>
+                    <input type="file" name="reviewImage1" accept="image/png, image/gif, image/jpeg" id="image-file"/><br>
+                    <input type="file" name="reviewImage2" accept="image/png, image/gif, image/jpeg" id="image-file" /><br>
+                    <input type="file" name="reviewImage3" accept="image/png, image/gif, image/jpeg" id="image-file" /><br>
+                    <input type="file" name="reviewImage4" accept="image/png, image/gif, image/jpeg" id="image-file" /><br>
+                    <input type="file" name="reviewImage5" accept="image/png, image/gif, image/jpeg" id="image-file"/><br>
+                    <label style="color:green;"> Insert videos (maximum of 3) </label> <br>
+                    <input type="file" name="reviewVideo1" accept="video/mp4" id="video-file"/><br>
+                    <input type="file" name="reviewVideo2" accept="image/png, image/gif, image/jpeg" id="video-file" /><br>
+                    <input type="file" name="reviewVideo3" accept="image/png, image/gif, image/jpeg" id="video-file" /><br>
+                    <input type="submit" value="Submit review"> 
+                </form>
+            {{else}}
+                 <p class="log-in-tag"> You must be <a href="/registerorlogin/{{restoReviewsdata._id}}" id="log-in-link">register/log-in</a> to create a review.</p>
+            {{/if}}
+
+            {{#each allReviews}}
+                <div class="review-detailed" id="review-{{reviewId}}">
+                     <div class="profile">
+                            <a href="/user-profile/{{userId}}"><img src="http://localhost:3000/{{userAvatar}}" alt="{{userAvatar}}" /></a>
+                            <div class="name-details">
+                                <p id="name">{{userName}}</p>
+                            </div>
+                     </div>
+                    <div class="rating2">
+                            <p id="rating-num">&nbsp;{{rating}} ⁕&nbsp;</p>
+                            <p id="dine-in2">DINE-IN</p>
+                            <p id="date">{{date_posted_formatted}}</p>
+                    </div>
+
+                     <div class="content">
+                            <p id="title">{{title}}</p>
+                            <div class="positive-or-negative">
+                             {{#if positive}}
+                                <i class="fa-solid fa-thumbs-up" style="color: #38af3a;"></i>
+                                <p id="preference" style="color: #38af3a;">POSITIVE</p>
+                             {{else}}
+                                <i class="fa-solid fa-thumbs-down" style="color: #c72222;"></i>
+                                <p id="preference" style="color: #c72222;">NEGATIVE</p>
+                             {{/if}}
+                            </div>
+                     </div>
+
+                     <div class="headings">
+                            {{#each review_keywords}}
+                                 <p>&nbsp;&nbsp;{{this}}&nbsp;&nbsp;</p>
+                            {{/each}}
+                     </div>
+
+                    <div class="review-content">
+                        <p>{{body}}</p>
+                    </div>
+
+
+                    <div class="review-photos">
+                        {{#if review_images}}
+                            {{#each review_images}}
+                                <img src="http://localhost:3000/{{this}}" alt="{{this}}" />
+                            {{/each}}
+                        {{/if}}
+
+                        {{#if review_videos}}
+                            {{#each review_videos}}
+                                <video controls>
+                                    <source src="http://localhost:3000/{{this}}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            {{/each}}
+                        {{/if}}
+
+                        {{#unless review_images}}
+                            {{#unless review_videos}}
+                                <p>No photos or videos available.</p>
+                            {{/unless}}
+                        {{/unless}}
+                    </div>
+
+                    <p id="votes-and-comments"><span id="no-of-votes-helpful">{{helpful_no}}</span> votes for helpful, <span id="no-of-votes-unhelpful">{{unhelpful_no}} </span> votes for unhelpful, <span id="no-of-comments">{{comments_no}}</span> comments</p>
+            
+                    {{#if ../userData}}
+                        <p> 
+                            <a href="/restaurant-reviews/{{../restoReviewsdata._id}}/mark-helpful/scroll-to-review/{{reviewId}}" class="interaction-link">Mark Helpful</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/restaurant-reviews/{{../restoReviewsdata._id}}/mark-unhelpful/scroll-to-review/{{reviewId}}" class="interaction-link">Mark Unhelpful</a>
+                        </p>
+                    {{else}}
+                        <p class="log-in-tag"> You must be <a href="/registerorlogin/{{../restoReviewsdata._id}}" id="log-in-link">register/log-in</a> to interact with the reviews.</p>
+                    {{/if}}
+
+                    <hr class="review-highlights2"/>
+
+                    
+                    <p class="label-for-comments"> Comments </p>
+
+                        {{#if comments.length}}
+                            <div class="comments">
+                                {{#each comments}}
+                                <div class="comment-profile">
+                                    <a href="/user-profile/{{commentUserId}}"><img src="http://localhost:3000/{{commentUserAvatar}}" alt="{{commentUserAvatar}}" /></a>
+                                    <p id="commentor">{{commentUserName}}</p>
+                                    <hr />
+                                    <div>
+                                        <p id="comment">{{content}}</p>
+                                        <p id="sent-details">Sent {{date_commented_formatted}}</p>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{else}}
+                            <p id = "no-comments">No comments</p>
+                        {{/if}}
+                   </div>
+               {{/each}}
+        </div>
+    </div>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const reviewId = "{{reviewId}}";
+
+            function scrollToReview() {
+                const reviewElement = document.getElementById('review-' + reviewId);
+                if (reviewElement) {
+                    reviewElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            setTimeout(scrollToReview, 100);
+        });
+    </script>
+
+    <script>
+        const message = "{{message}}";
+        const redirectUrl = "{{redirectUrl}}";
+
+        if (message) {
+            alert(message);
+        }
+
+        if (redirectUrl) {
+            window.location.href = redirectUrl;
+        }
+
+    </script>

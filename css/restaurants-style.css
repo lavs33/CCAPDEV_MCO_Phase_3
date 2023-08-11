@@ -1,0 +1,506 @@
+
+.header #logo-white{
+    position: absolute;
+    top: 30px;
+    left: 350px;
+    width: 600px;
+    height: 600px;
+}
+
+.header #cover-img{
+    width:100%;
+    height:565px;
+    filter: brightness(60%);
+}
+
+.header .navbar{
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.header .navbar a{
+    text-decoration: none;
+    font-family: var(--primary-font);
+    color: white;
+    font-size: 17px;
+    padding: 30px;
+    padding: 20px 20px;
+    position: relative;
+}
+  
+.header .navbar a:after{
+    content: "";
+    position: absolute;
+    background-color: #173518;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+  
+.header .navbar a:hover{
+    color: white;
+    text-shadow: 0 0 5px #173518;
+}
+  
+.header .navbar a:hover:after{
+    width: 100%;
+}
+
+.header #description{
+    position: absolute;
+    top: 75%;
+    left: 72%;
+    transform: translate(-50%, -90%);
+    color:white;
+    font-family: var(--primary-font);
+    font-size: 30px;
+    width: 100%;
+    font-weight: 400;
+}
+
+#dlsu-logo{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+#restos-descrip{
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 300;
+    color:rgb(118, 117, 117);
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+    line-height: 30px;
+}
+
+#engage{
+    width: 90px;
+    height: 2px;
+    background-color: green;
+    border-color: green;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.8);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.wrapper {
+	margin: 70px auto;
+    margin-top: 30px;
+	padding: 20px;
+	background-color: white;
+	border-radius: 5px;
+	width: 30%;
+	position: relative;
+	transition: all 5s ease-in-out;
+}
+
+.wrapper h2 {
+	margin-top: 10px;
+    margin-bottom: 0;
+	color: #333;
+    font-family: var(--primary-font);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.wrapper .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.wrapper .close:hover {
+	color: #06D85F;
+}
+
+.wrapper .content {
+	max-height: 30%;
+	overflow: auto;
+    height: fit-content;
+}
+
+.sign-in-container {
+	border-radius: 5px;
+	background-color: white;
+	padding: 20px 0;
+    font-family: var(--primary-font);
+}
+
+.sign-in-container .existing-account-log-in{
+    margin-top: 10px;
+	text-decoration: none;
+    color: rgb(79, 184, 79);
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+form label {
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 3px;
+    font-family: var(--primary-font);
+    color: #a4a1a1;
+}
+
+.label-rating-filter {
+	letter-spacing: 0px;
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 2px solid green;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+    font-family: var(--primary-font);
+}
+
+input[type=password], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 2px solid green;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+    font-family: var(--primary-font);
+}
+
+input[type="submit"] {
+	background-color: #736b6b;
+	color: #fff;
+	padding: 5px;
+    width: 379px;
+	border: none;
+	border-radius: 7px;
+	cursor: pointer;
+	font-size: 13px;
+	letter-spacing: 1px;
+    font-family: var(--primary-font);
+    margin-top: 20px;
+    height: 30px;
+}
+
+input[type="submit"]:hover {
+	background-color: green;
+	color: #fff;
+}
+
+.border{
+    height: 1px;
+    border: none;
+    color: #efefef;
+}
+
+.form-container {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form{
+    background: #fff;
+    position: absolute;
+    top: 700px;
+    left: 350px;
+    width: 550px;
+    height: 55px;
+    display: flex;
+    border: 1px solid #bbbbbb;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: var(--primary-font);
+    color: rgb(74, 73, 73);
+    margin-top: 15px;
+}
+
+.form-container form input::placeholder{
+    color: gray;
+}
+
+.form-container form button{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    color: white;
+    background-color: #333333;
+}
+
+.form-container form .fa-light{
+    align-self: center;
+    padding: 10px 20px;
+    color: gray;
+}
+
+h5{
+    font-family: var(--primary-font);
+    font-size: 12px;
+    font-weight: 300;
+    height: 0px;
+    margin-left: 71px;
+    color: gray;
+}
+
+
+.fa-sharp{
+    align-self: center;
+    color: gray;
+}
+  
+.dine-in{
+    position: absolute;
+    margin-top: -7px;
+    margin-left: 75px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+  
+.dine-in #dine-in-img{
+    width: 90px;
+    height: 90px;
+}
+  
+.dine-in #dine-in-text{
+    font-family: var(--primary-font);
+    font-size: 27px;
+    color: #008000;
+}
+  
+#dine-in-line{
+    margin-top:  100px;
+    width: 220px;
+    height: 2px;
+    background-color: green;
+    border: 0;
+    border-color: green;
+    margin-left: 80px;
+}
+
+#main-line{
+    margin-top: -9px;
+    width: 2000px;
+    background-color: rgb(202, 202, 202);
+    border-color: rgb(202, 202, 202);
+    height: 1px;
+    border: 0;
+    opacity: 25%;
+}
+  
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    transition: top 0.5s ease-in-out 0s;
+    z-index: 9999;
+}
+  
+#filters{
+    font-family: var(--primary-font);
+    font-size: 14px;
+    border: 1px solid rgb(184, 183, 183);
+    box-shadow: 0px 0px 5px rgb(202, 202, 202); 
+    border-radius: 5px;
+    color:rgb(192, 192, 192);
+    background-color: white;
+    font-weight: 300;
+    height: 35px;
+    width: 80px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+  
+#filters:hover{
+    background-color:rgb(245, 241, 241) !important;
+}
+  
+#filters i{
+    padding: 5px;
+    padding-left: 2px;
+}
+
+#filters-section{
+    margin-left: 120px;
+    margin-bottom: 50px;
+}
+
+.rating-labels{
+    font-family: var(--primary-font);
+    color:green;
+    margin-left: 110px;
+    display: flex; 
+    justify-content: space-between; 
+    width: 260px; 
+}
+
+input[type="range"] {
+    width: 23%;
+}
+  
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: green;
+    border-radius: 10px;
+}
+
+
+#rating-labels span {
+    flex: 1; 
+    text-align: center;
+}
+
+#apply-filter-btn{
+    font-family: var(--primary-font);
+    color:#173518;
+    background-color: rgb(187, 186, 186);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#apply-filter-btn:hover{
+    color: rgb(187, 186, 186);
+    background-color: #173518;
+}
+
+.hidden {
+    display: none;
+}
+
+.establishments{
+    margin-left: 45px;
+    display: flex;
+    flex-direction: row;
+}
+  
+.establishments a{
+    text-decoration: none;
+    color: black;
+}
+  
+.establishments .restaurant img{
+    width: 300px;
+    height: 250px;
+    border-radius: 15px;
+    image-rendering: crisp-edges;
+}
+  
+.establishments .restaurant{
+    margin-left: 50px;
+    padding: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    width: 300px;
+}
+  
+.establishments .restaurant .badges{
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    display: flex;
+    flex-direction: row;
+}
+  
+.establishments .restaurant .badges p{
+    font-size: 10px;
+    font-family: var(--primary-font);
+    font-weight: 300;
+    color: rgba(224, 224, 224, 0.491);
+    background-color: rgba(0, 0, 0, 0.434);
+    border-radius: 3px;
+    margin-left: 4px;
+}
+  
+.establishments .restaurant:hover{
+    box-shadow: 0px 3px 5px rgb(165, 165, 165);
+    border-radius: 15px;
+}
+  
+.establishments .restaurant .name {
+    font-family: var(--primary-font);
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+}
+  
+.establishments .restaurant .name h3{
+   font-size: 18px;
+   font-weight: 400;
+   width: 300px;
+}
+  
+.establishments .restaurant .name p{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: #008000;
+    border-radius: 5px;
+    height: 20px;
+    width: 35px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 158px;
+}
+  
+.establishments .restaurant .name p{
+    margin-left: 5px;
+}
+  
+.establishments .restaurant .type{
+    font-family: var(--primary-font);
+    font-size: 13px;
+    color:rgb(174, 173, 173);
+    margin-top: -15px;
+}
