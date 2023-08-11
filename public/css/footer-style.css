@@ -1,0 +1,48 @@
+
+.footer{
+    height: 320px;
+    margin-top: 100px;
+    background: rgb(235, 233, 233);
+}
+  
+.footer .logo-black{
+    position: relative;
+    top: 0px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+}
+
+.footer ul{
+    list-style: none;
+    font-family: var(--primary-font);
+    margin-top: -10px;
+    font-size: 14px;
+    margin-left: 60px;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
+.footer ul li a:hover{
+    color: black;
+}
+  
+.footer hr{
+    margin-left: 100px;
+    width: 1100px;
+    background-color: #173518;
+    border-color: #173518;
+    opacity: 25%;
+}
+  
+.footer #closing{
+    color: #173518;
+    font-family: var(--primary-font);
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+  

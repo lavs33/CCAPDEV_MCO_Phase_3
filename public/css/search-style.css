@@ -1,0 +1,232 @@
+
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+  
+.header #logo-black{
+      position: absolute;
+      top: -5px;
+      left: 25px;
+      width: 200px;
+      height: 200px;
+}
+  
+.header .form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+h5{
+      font-family: var(--primary-font);
+      margin-top: -10px;
+      font-size: 12px;
+      font-weight: 300;
+      height: 0px;
+      margin-left: 71px;
+      color: gray;
+}
+  
+  
+#main-line{
+      height: 2px;
+      color: rgb(223, 223, 223);
+      opacity: 25%;
+}
+    
+.form-container form{
+      background: #fff;
+      position: absolute;
+      top: 30px;
+      left: 430px;
+      width: 550px;
+      height: 55px;
+      display: flex;
+      border: 1px solid #bbbbbb;
+      margin-left: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+      height: 60px;
+}
+    
+.form-container form input{
+      flex: 1;
+      border: none;
+      outline: none;
+      font-family: var(--primary-font);
+      color: rgb(74, 73, 73);
+}
+    
+.form-container form input::placeholder{
+      color: gray;
+}
+    
+.form-container form button{
+      padding: 10px 50px;
+      border: none;
+      outline: none;
+      color: #fff;
+      letter-spacing: 1px;
+      cursor: pointer;
+      font-family: var(--primary-font);
+      color: white;
+      background-color: #333333;
+}
+    
+.form-container form .fa-light{
+      align-self: center;
+      padding: 10px 20px;
+      color: gray;
+}
+    
+.fa-sharp{
+      align-self: center;
+      color: gray;
+}
+    
+.dine-in{
+      position: absolute;
+      margin-top: -7px;
+      margin-left: 75px;
+      width: 400px;
+      height: 200px;
+      display: flex;
+      flex-direction: row;
+}
+    
+  
+.dine-in #dine-in-img{
+        width: 90px;
+        height: 90px;
+}
+    
+.dine-in #dine-in-text{
+        font-family: var(--primary-font);
+        font-size: 27px;
+        color: #008000;
+}
+    
+#dine-in-line{
+      margin-top: 100px;
+      width: 220px;
+      height: 2px;
+      background-color: green;
+      border: 0;
+      border-color: green;
+      margin-left: 80px;
+}
+    
+#main-line{
+      margin-top: -8px;
+      background-color: rgb(202, 202, 202);
+      border-color: rgb(202, 202, 202);
+      height: 1px;
+      border: 0;
+}
+  
+#search-results{
+      font-family: var(--primary-font);
+      font-size: 25px;
+      font-weight: 400;
+      margin-left: 140px;
+      margin-top: 20px;
+}
+  
+    
+#search-results em{
+      color: rgb(105, 195, 105);
+}
+  
+.establishments{
+      margin-left: 45px;
+      display: flex;
+      flex-direction: row;
+}
+    
+.establishments .restaurant img{
+      width: 300px;
+      height: 250px;
+      border-radius: 15px;
+      image-rendering: crisp-edges;
+}
+    
+.establishments .restaurant{
+        margin-left: 50px;
+        padding: 15px;
+        margin-bottom: 25px;
+        width: 300px;
+        position: relative;
+}
+  
+  
+.establishments .restaurant .badges{
+      position: absolute;
+      top: 15px;
+      left: 25px;
+      display: flex;
+      flex-direction: row;
+}
+    
+.establishments .restaurant .badges p{
+      font-size: 10px;
+      font-family: var(--primary-font);
+      font-weight: 300;
+      color: rgba(224, 224, 224, 0.491);
+      background-color: rgba(0, 0, 0, 0.434);
+      border-radius: 3px;
+      margin-left: 4px;
+}
+    
+.establishments .restaurant:hover{
+    box-shadow: 0px 3px 5px rgb(165, 165, 165);
+    border-radius: 15px;
+}
+  
+.establishments .restaurant .name {
+    font-family: var(--primary-font);
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+}
+  
+.establishments .restaurant .name h3{
+   font-size: 18px;
+   font-weight: 400;
+   width: 300px;
+}
+  
+.establishments .restaurant .name p{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: #008000;
+    border-radius: 5px;
+    height: 20px;
+    width: 35px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 158px;
+}
+  
+.establishments .restaurant .name p{
+    margin-left: 5px;
+}
+  
+.establishments .restaurant .type{
+    font-family: var(--primary-font);
+    font-size: 13px;
+    color:rgb(174, 173, 173);
+    margin-top: -15px;
+}
+
+#none {
+    font-family: var(--primary-font);
+    font-size: 17px;
+    color:rgb(16, 50, 13);
+    font-weight: 400;
+    text-align: center;
+}

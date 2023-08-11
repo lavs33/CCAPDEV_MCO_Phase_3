@@ -1,0 +1,539 @@
+
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+}
+  
+.header #logo-black{
+      position: absolute;
+      top: -5px;
+      left: 25px;
+      width: 200px;
+      height: 200px;
+}
+
+.header .form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h5{
+    font-family: var(--primary-font);
+    margin-top: -10px;
+    font-size: 12px;
+    font-weight: 300;
+    height: 50px;
+    margin-left: 71px;
+    color: gray;
+}
+
+h5 span{
+    color: rgb(187, 185, 185);
+}
+  
+.form-container form{
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    left: 430px;
+    width: 550px;
+    height: 55px;
+    display: flex;
+    border: 1px solid #bbbbbb;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 60px;
+}
+
+.form-container form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: var(--primary-font);
+    color: rgb(74, 73, 73);
+}
+
+.form-container form input::placeholder{
+    color: gray;
+}
+
+ 
+.form-container form button{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    color: white;
+    background-color: #333333;
+}
+
+
+.form-container form .fa-light{
+    align-self: center;
+    padding: 10px 20px;
+    color: gray;
+}
+
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    transition: top 0.5s ease-in-out 0s;
+    z-index: 9999;
+    background-color: white;
+  }
+
+.title-container {
+    margin-left: 70px;
+    margin-top: -35px;
+    display: flex;
+    flex-direction: row;
+    z-index: 9999;
+    background-color: white;
+}
+
+.title-container .name-details{
+    font-family: var(--primary-font);
+}
+
+.title-container .name-details #name{
+    font-size: 35px;
+    font-weight: 600px;
+}
+
+.title-container .name-details #type{
+    font-weight: 300;
+    margin-top: -30px;
+}
+
+.title-container .name-details #location{
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: -10px;
+    color: gray;
+}
+
+.title-container .name-details #details{
+    font-weight: 200;
+    margin-top: -5px;
+    color: gray;
+    font-size: 14px;
+}
+
+.title-container .name-details #details span{
+    color: green;
+}
+
+.sticky .navbar{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--primary-font);
+    font-size: 18px;
+    margin-left: 65px;
+    justify-content: space-around;
+    margin-right: 75px;
+    background-color: white;
+    z-index: 9999;
+}
+
+.sticky .active-link {
+    color: rgb(2, 99, 2);
+    font-weight: 500;
+}
+  
+.sticky .not-active-link {
+    color: rgb(71, 70, 70);
+}
+
+.sticky .navbar a:hover{
+    color:rgb(2, 99, 2);
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    margin-top:70px;
+    margin-left: 550px;
+    font-family: var(--primary-font);
+}
+
+.rating #stars{
+    background-color: green;
+    color:white;
+    font-weight: 600;
+    border-radius: 7px;
+    height: 25px;
+}
+
+.rating .no-of-reviews{
+    font-size: 13px;
+    margin-left: 7px;
+    margin-top: -3px;
+}
+
+.rating .no-of-reviews #dine-in-reviews{
+    height: 5px;
+    font-weight: 600;
+}
+
+.rating .no-of-reviews p{
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration-style: dotted;
+    text-underline-offset: 5px;
+    color: rgb(103, 103, 103);
+}
+
+#main-line{
+    margin-top: 2px;
+    width: 1123px;
+    background-color: rgb(63, 63, 63);
+    border-color: rgb(63, 63, 63);
+    height: 2px;
+    border: 0;
+}
+
+.section {
+    font-family: var(--primary-font);
+    margin-left:68px;
+}
+
+ .review-detailed{
+    margin-bottom: 100px;
+ }
+  .review-detailed{
+    background-color: white;
+    border-radius: 10px;
+    width: 700px;
+    max-height: 1000px;
+  }
+  
+  .review-detailed .profile{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .review-detailed .profile, .rating2, .content{
+    margin-left: 20px;
+  }
+  
+  .review-detailed .rating2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  
+  .review-detailed .review-content{
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color:#173518;
+  }
+  
+  .review-detailed .review-photos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .review-detailed .review-photos img{
+    width: 200px;
+    height: 150px;
+    margin-left: 15px;
+    margin-top: 30px;
+  }
+  
+  .profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+  }
+  
+  .profile .name-details{
+    margin-left: 15px;
+    margin-top: -15px;
+  }
+  
+  .profile .name-details #name{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .profile .name-details #no-of-reviews{
+    font-size: 14px;
+    font-weight: 200;
+    color: gray;
+    margin-top: -10px;
+  }
+  
+  .review .rating2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  
+  .rating2 #rating-num{
+    background-color: green;
+    color:white;
+    font-weight: 500;
+    border-radius: 7px;
+    height: 20px;
+    font-size: 14px;
+  }
+  
+  .rating2 #dine-in2{
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .rating2 #date{
+    margin-left: 10px;
+    color:gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .content #title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 2px;
+  }
+  
+  .content .positive-or-negative{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .content .positive-or-negative #preference{
+    font-size: 14px;
+    color: #38af3a;
+    margin-left: 8px;
+    margin-top: -1px;
+  }
+  
+  .headings{
+    display: flex;
+    flex-direction: row;
+    color: gray;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  .headings p{
+    background-color: rgb(184, 184, 184);
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  
+  #votes-and-comments{
+    margin-left: 20px;
+    color:gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .review-highlights{
+    margin-left: 1px;
+    width: 748px;
+    background-color: #edefed;
+    border-color: #edefed;
+    margin-bottom: 30px;
+    opacity: 25%;
+  }
+  
+  .review-highlights2{
+    margin-left: 20px;
+    width: 500px;
+    background-color: #edefed;
+    border-color: #edefed;
+    margin-bottom: 30px;
+    opacity: 25%;
+  }
+  
+  .name-of-resto{
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  #part1 #all-filters{
+    display: flex;
+    flex-direction: row;
+    margin-left: -18px;
+    height: 30px;
+    margin-top: 70px;
+  }
+  
+  #part1 #all-filters .dropdown-reviews-filters{
+    padding: 8px 12px;
+    color: gray;
+    background-color: white;
+    border: 0;
+    font-family: var(--primary-font);
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: -10px;
+  }
+  
+  #all-filters i{
+    margin-top: -20px;
+    margin-left: 835px;
+  }
+  
+  #all-filters .fa-filter{
+    margin-top: -10px;
+    margin-left: 50px;
+  }
+
+  .label-for-comments{
+    font-size: 14px;
+    font-weight: 600;
+    color: #275829;
+    margin-left: 5px;
+    margin-top: -5px;
+  }
+  
+  .comments {
+    background-color: white;
+    border: 1px solid rgb(236, 233, 233);
+    border-radius: 5px;
+    height: 70px;
+    margin-bottom: 5px;
+  }
+  
+  .comments .comment-profile{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  
+  .comments .comment-profile div{
+    overflow:scroll;
+  }
+  
+  .comments .comment-profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 5px;
+  }
+  
+  .comments .comment-profile #commentor{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+    min-width: 70px;
+  }
+  
+  .comments .comment-profile hr{
+    margin-left: 10px;
+    height: 45px;
+  }
+  
+  .comments .comment-profile div{
+    margin-left: 5px;
+  }
+  
+  .comments .comment-profile #comment{
+    font-size: 13px;
+    font-weight: 300;
+    margin-right: 360px;
+    margin-top: 17px;
+    width: 800px;
+  }
+  
+  .comments .comment-profile #sent-details{
+    font-size: 9px;
+    color:rgb(192, 190, 190);
+    margin-top: -10px;
+  }
+  
+  .rating .no-of-reviews p{
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: dotted;
+    text-underline-offset: 5px;
+    color: rgb(103, 103, 103);
+  }
+
+  .form-container2{
+    margin-bottom: 100px;
+  }
+
+  .form-container2 form{
+    background: #fff;
+    position: absolute;
+    top: 450px;
+    left: 350px;
+    width: 550px;
+    height: 55px;
+    display: flex;
+    border: 1px solid #bbbbbb;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  .form-container2 form input{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 400px;
+    border: none;
+    outline: none;
+    font-family: var(--primary-font);
+    color: rgb(74, 73, 73);
+  }
+
+  .form-container2 form input::placeholder{
+    color: gray;
+  }
+
+  .form-container2 form button{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: var(--primary-font);
+    color: white;
+    background-color:#173518;
+    position: absolute;
+    top: 0px;
+    left: 398px;
+    height: 60px;
+  }
+
+  .form-container2 form .fa-light{
+    align-self: center;
+    padding: 10px 20px;
+    color: gray;
+    position: absolute;
+    top: 35px;
+    left: -846px;
+  }
+
+.fa-sharp{
+    align-self: center;
+    color: gray;
+ }
+
+#no-comments{
+    font-size: 12px;
+    margin-left: 5px;
+}
