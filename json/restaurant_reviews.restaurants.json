@@ -1,0 +1,268 @@
+[{
+  "_id": {
+    "$oid": "64b3abdcb28dd377d35abf8e"
+  },
+  "name": "Perico's Grill",
+  "keywords": [
+    "Filipino",
+    "Pasta",
+    "Tapa",
+    "Chicken",
+    "Pork",
+    "Seafood"
+  ],
+  "address": "South Wing, 2401, St La Salle Hall, Ground, 1004 Taft Ave, Malate, Manila, Metro Manila",
+  "badges": [
+    "Variety",
+    "Standard",
+    "Taste"
+  ],
+  "main_img": "restaurants-images/pericos-food.jpg",
+  "address_img": "pericos-location.jpg",
+  "badges_description": [
+    "The restaurant can offer a diverse range of options on their menu, catering to different tastes and dietary preferences.",
+    "The restaurant can uphold exceptional culinary standards, using high-quality ingredients to consistently deliver flavorful and well-executed dishes.",
+    "The restaurant can excel in delivering delicious, flavorful dishes that tantalize the taste buds and leave customers satisfied."
+  ],
+  "badges_img": [
+    "variety.png",
+    "standard.png",
+    "taste.png"
+  ],
+  "contact_number": "None",
+  "cover_photos": [
+    "pericos-2.jpg",
+    "pericos-3.jpg",
+    "pericos-4.jpg"
+  ],
+  "known_for": "Timely Service, Delicious Food, Various Food Options, Elaborate Menu, High-quality and Fresh Food",
+  "location_hall": "Ground Floor of St. La Salle Hall, near Br. Connon Hall",
+  "menu_images": [
+    "pericos-menu1.jpg",
+    "pericos-menu2.jpg",
+    "pericos-menu3.jpg"
+  ],
+  "more_info": [
+    "Indoor Seating",
+    "With Bakery",
+    "With Street Food Options",
+    "With Mini Fruit Shakes Stall"
+  ],
+  "no_of_reviews": 3,
+  "opening_hours": "8am-5pm",
+  "overall_rating": 4.8
+},
+{
+  "_id": {
+    "$oid": "64b3bc37b28dd377d35abf92"
+  },
+  "name": "Famous Belgian Waffles",
+  "keywords": [
+    "Breakfast",
+    "Sweets",
+    "Savory",
+    "Coffee"
+  ],
+  "address": "Perico's Grill + Canteen, South Wing, 2401, St La Salle Hall, Ground, 1004 Taft Ave, Malate, Manila, Metro Manila",
+  "badges": [
+    "Variety",
+    "Affordability",
+    "Taste"
+  ],
+  "address_img": "pericos-location.jpg",
+  "badges_description": [
+    "The restaurant can offer a diverse range of options on their menu, catering to different tastes and dietary preferences.",
+    "The restaurant can provide reasonably priced meals and offers value for money without compromising on quality.",
+    "The restaurant can excel in delivering delicious, flavorful dishes that tantalize the taste buds and leave customers satisfied."
+  ],
+  "badges_img": [
+    "variety.png",
+    "affordability.png",
+    "taste.png"
+  ],
+  "contact_number": "None",
+  "cover_photos": [
+    "fbw-1.jpg",
+    "fbw-2.jpg",
+    "fbw-3.jpg"
+  ],
+  "known_for": "Sweet and Savory Waffles, Affordable Breakfast, Mouth-watering Snacks, Hot Beverages",
+  "location_hall": "Ground Floor of St. La Salle Hall in Perico's Grill + Canteen",
+  "main_img": "restaurants-images/fbw-food.jpg",
+  "menu_images": [
+    "fbw-menu-1.jpg"
+  ],
+  "more_info": [
+    "Freshly Made Waffles",
+    "Long waiting time"
+  ],
+  "no_of_reviews": 2,
+  "opening_hours": "Unknown",
+  "overall_rating": 4.7
+},
+{
+  "_id": {
+    "$oid": "64b3c190b28dd377d35abf93"
+  },
+  "name": "Happy N' Healthy",
+  "keywords": [
+    "Veggies",
+    "Pasta",
+    "Chicken",
+    "Beef",
+    "Shakes",
+    "Juices"
+  ],
+  "address": "Br. Bloemen Hall, De La Salle University, 2401 Taft Ave, Malate, Manila, 1004 Metro Manila",
+  "badges": [
+    "Standard"
+  ],
+  "address_img": "bloemen-location.jpg",
+  "badges_description": [
+    "The restaurant can uphold exceptional culinary standards, using high-quality ingredients to consistently deliver flavorful and well-executed dishes."
+  ],
+  "badges_img": [
+    "standard.png"
+  ],
+  "contact_number": "None",
+  "cover_photos": [
+    "hnh-food-1.jpg",
+    "hnh-food-2.png",
+    "hnh-food-3.png"
+  ],
+  "known_for": "Healthy, balanced meals, Quality ingredients, Refreshing coolers",
+  "location_hall": "Br. Bloemen Hall",
+  "main_img": "restaurants-images/hnh-food.jpg",
+  "menu_images": [
+    "hnh-menu1.jpg"
+  ],
+  "more_info": [
+    "Good, Homely food",
+    "Elaborate Menu",
+    "Kind Staff"
+  ],
+  "no_of_reviews": 4,
+  "opening_hours": "8am - 7pm",
+  "overall_rating": 4.2
+},
+{
+  "_id": {
+    "$oid": "64b3c866b28dd377d35abf94"
+  },
+  "name": "Jamaican Pattie Shop",
+  "keywords": [
+    "Pastry",
+    "Snacks",
+    "Spicy",
+    "Beef",
+    "Cold",
+    "Beverages"
+  ],
+  "address": "Br. Bloemen Hall, De La Salle University, 2401 Taft Ave, Malate, Manila, 1004 Metro Manila",
+  "badges": [],
+  "address_img": "bloemen-location.jpg",
+  "badges_description": [],
+  "badges_img": [],
+  "contact_number": "None",
+  "cover_photos": [
+    "jamaican-1.jpg",
+    "jamaican-2.jpg",
+    "jamaican-3.jpg"
+  ],
+  "known_for": "Quick Savory Snacks, Healthy Beverages, All-in-one place Food Stop",
+  "location_hall": "Br. Bloemen Hall",
+  "main_img": "restaurants-images/jamaican-food.jpg",
+  "menu_images": [
+    "jp-menu1.jpg",
+    "jp-menu2.jpg"
+  ],
+  "more_info": [
+    "Combination Food Stall",
+    "Elaborate Menu"
+  ],
+  "no_of_reviews": 1,
+  "opening_hours": "Unknown",
+  "overall_rating": 3.5
+},
+{
+  "_id": {
+    "$oid": "64b3d3bab28dd377d35abf96"
+  },
+  "name": "Aice Ice Cream",
+  "keywords": [
+    "Sweets",
+    "Cold"
+  ],
+  "address": "Perico's Grill + Canteen, South Wing, 2401, St La Salle Hall, Ground, 1004 Taft Ave, Malate, Manila, Metro Manila",
+  "badges": [
+    "Affordability"
+  ],
+  "address_img": "pericos-location.jpg",
+  "badges_description": [
+    "The restaurant can provide reasonably priced meals and offers value for money without compromising on quality."
+  ],
+  "badges_img": [
+    "affordability.png"
+  ],
+  "contact_number": "None",
+  "cover_photos": [
+    "aice-1.jpg",
+    "aice-2.jpg",
+    "aice-3.jpg"
+  ],
+  "known_for": "Nice and sweet ice-cream, Budget-friendly, Array of flavors",
+  "location_hall": "Ground Floor of St. La Salle Hall in Perico's Grill + Canteen",
+  "main_img": "restaurants-images/aice-food.jpg",
+  "menu_images": [
+    "aice-menu1.jpg"
+  ],
+  "more_info": [
+    "Free to pick from an Ice Cream Freezer",
+    "Convenient to buy and quick to eat"
+  ],
+  "no_of_reviews": 3,
+  "opening_hours": "Unknown",
+  "overall_rating": 4.3
+},
+{
+  "_id": {
+    "$oid": "64b3db2ab28dd377d35abf97"
+  },
+  "name": "Potato Giant",
+  "keywords": [
+    "Snacks",
+    "Fries",
+    "Mojo Potatoes",
+    "Hashbrowns"
+  ],
+  "address": "Perico's Grill + Canteen, South Wing, 2401, St La Salle Hall, Ground, 1004 Taft Ave, Malate, Manila, Metro Manila",
+  "badges": [
+    "Taste"
+  ],
+  "address_img": "pericos-location.jpg",
+  "badge_description": [
+    "The restaurant can excel in delivering delicious, flavorful dishes that tantalize the taste buds and leave customers satisfied."
+  ],
+  "badges_img": [
+    "taste.png"
+  ],
+  "contact_number": "None",
+  "cover_photos": [
+    "potato-giant1.jpg",
+    "potato-giant2.jpg",
+    "potato-giant3.jpg"
+  ],
+  "known_for": "Hot Potato Snacks, With Dips, Quick to Eat, Appetizing Unique Options",
+  "location_hall": "Ground Floor of St. La Salle Hall in Perico's Grill + Canteen",
+  "main_img": "restaurants-images/potato-giant-food.jpg",
+  "menu_images": [
+    "pgmenu1.jpg"
+  ],
+  "more_info": [
+    "Snacks With Mini Fork",
+    "Long waiting time"
+  ],
+  "no_of_reviews": 2,
+  "opening_hours": "Unknown",
+  "overall_rating": 4.5
+}]

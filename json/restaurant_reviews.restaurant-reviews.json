@@ -1,0 +1,405 @@
+[{
+  "_id": {
+    "$oid": "64b796a7eb706995214e45ae"
+  },
+  "title": "Delicious Food and Excellent Service",
+  "body": "Me and my friends enjoyed the food here, especially the bestsellers, Beef Tapa with Egg, Honey Buffalo Wings.. and I also loved their Mango Fruitshake 💗 The food look so appetizing and are indeed well-seasoned. The waiters were also kind and welcoming to us. The service was on-time. We gave a tip to them😊",
+  "date_posted": "2023-05-18T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "well-seasoned food",
+    "kind waiters",
+    "on-time service"
+  ],
+  "rating": 5,
+  "helpful_no": 1,
+  "unhelpful_no": 0,
+  "comments_no": 1,
+  "restaurant_id": {
+    "$oid": "64b3abdcb28dd377d35abf8e"
+  },
+  "user_id": {
+    "$oid": "64b78b8deb706995214e459a"
+  },
+  "review_images": [
+    "reviews-images/beef-tapa-with-egg.jpg",
+    "reviews-images/honey-buffalo-wings.jpg",
+    "reviews-images/mango-shake.jpg"
+  ],
+  "comments": [
+    {
+      "$oid": "64b7ab36eb706995214e45c9"
+    }
+  ],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64b79de0eb706995214e45af"
+  },
+  "title": "Quality with Variety of Foods",
+  "body": "By the look and taste of the food, I can say that the ingredients are all fresh and of good quality, hence the food ought to be tasty. The many times I visit this restaurant, I order different food items because of the variety there is, which I like. Not only do I eat lunch here, but I also come her during merienda time to eat some pastries from their mini-bakery or street foods whenever I crave. The line for the Shakes is always long when I come hence I haven't tried it yet but will surely do soon 😋 I also like that the staff keep the indoor seating area always clean since I enjoy eating my food in a hygienic place.",
+  "date_posted": "2023-04-15T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "fresh ingredients",
+    "clean indoor seating",
+    "available merienda options"
+  ],
+  "rating": 5,
+  "helpful_no": 2,
+  "unhelpful_no": 0,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3abdcb28dd377d35abf8e"
+  },
+  "user_id": {
+    "$oid": "64b78e81eb706995214e45a1"
+  },
+  "review_images": [
+    "reviews-images/spanish-bread.jpg",
+    "reviews-images/street-food.jpg",
+    "reviews-images/pericos-canteen.jpg"
+  ],
+  "review_videos": [],
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "64b7a0daeb706995214e45bc"
+  },
+  "title": "The Top Restaurant in DLSU!",
+  "body": "This is certainly my favorite food place in DLSU. So convenient to eat in the campus with food that tastes close to one's home, so gooooood. I don't have to go out anymore and the prices are not bad for anyone on a budget. The service is great. My personal favorite is the Chicken Cordon Bleu...chef's kiss😘",
+  "date_posted": "2023-04-08T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "worth the money",
+    "homely, tasty food",
+    "great service"
+  ],
+  "rating": 5,
+  "helpful_no": 3,
+  "unhelpful_no": 1,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3abdcb28dd377d35abf8e"
+  },
+  "user_id": {
+    "$oid": "64b78f54eb706995214e45a2"
+  },
+  "comments": [],
+  "review_images": [
+    "reviews-images/chicken-cordon-bleu.jpg"
+  ],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be73691b2bf4078488e862"
+  },
+  "title": "Tastes Great!",
+  "body": "I honestly never ate a waffle before. The experience was something new and I liked it. The Cream Cheese Waffle was good...but I did found the long wait bothering especially if you have an upcoming class. Not really convenient but suggested for those who have time to kill.",
+  "date_posted": "2023-06-02T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "something new",
+    "long wait is bothering"
+  ],
+  "rating": 4,
+  "helpful_no": 0,
+  "unhelpful_no": 2,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3bc37b28dd377d35abf92"
+  },
+  "user_id": {
+    "$oid": "64b78b8deb706995214e459a"
+  },
+  "review_images": [
+    "reviews-images/cream-cheese-waffle.jpg"
+  ],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be7a121b2bf4078488e86f"
+  },
+  "title": "Great Breakfast Option",
+  "body": "There are many flavors which make it hard to pick but I would definitely like to taste them all 🙂 I watched them make the waffle on the spot and not only does it make it mouth-watering, but their service is clean. Even though I had to wait for so long, it was worth it.",
+  "date_posted": "2023-06-09T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "multiple flavours",
+    "clean service",
+    "worth the wait"
+  ],
+  "rating": 5,
+  "helpful_no": 5,
+  "unhelpful_no": 0,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3bc37b28dd377d35abf92"
+  },
+  "user_id": {
+    "$oid": "64b78e81eb706995214e45a1"
+  },
+  "review_images": [],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be7c0c1b2bf4078488e87c"
+  },
+  "title": "All Health Conscious, Listen!",
+  "body": "This restaurant is perfect for those who are health conscious like me. The vegetables and meat are well-cooked. Healthy food can be tasty indeed and they prove this 😄 My favorite is the Grilled Tuna Meal with Sweet Potato.. Yuuum! Plus, their service is also quick thanks to the kind staff😍",
+  "date_posted": "2023-06-12T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "quick service",
+    "well-cooked vegetables and meat"
+  ],
+  "rating": 5,
+  "helpful_no": 4,
+  "unhelpful_no": 1,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3c190b28dd377d35abf93"
+  },
+  "user_id": {
+    "$oid": "64b78f54eb706995214e45a2"
+  },
+  "review_images": [
+    "reviews-images/grilled-tuna.jpg"
+  ],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be7f621b2bf4078488e882"
+  },
+  "title": "Good food but need more seasoning",
+  "body": "The food was good but I found that the seasoning was a bit lacking. Moreover, it was also well-prepared and served in a container. I also drank their honey lemon juice and I can guarantee it was fresh.",
+  "date_posted": "2023-07-01T00:00:00.000Z",
+  "positive": false,
+  "review_keywords": [
+    "lack of seasoning",
+    "well-prepared and served",
+    "fresh juice"
+  ],
+  "rating": 4,
+  "helpful_no": 5,
+  "unhelpful_no": 0,
+  "comments_no": 1,
+  "restaurant_id": {
+    "$oid": "64b3c190b28dd377d35abf93"
+  },
+  "user_id": {
+    "$oid": "64b79202eb706995214e45a4"
+  },
+  "review_images": [
+    "reviews-images/lemon-juice.jpg"
+  ],
+  "comments": [
+    {
+      "$oid": "64be81701b2bf4078488e88a"
+    }
+  ],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be82a01b2bf4078488e898"
+  },
+  "title": "Coldness can ruin the experience",
+  "body": "Don't get me wrong. I love their food and the taste is pleasant, but they could certainly warm the meals up for a more enjoyable eating experience..just a suggestion hehe 🤗",
+  "date_posted": "2023-07-14T00:00:00.000Z",
+  "positive": false,
+  "review_keywords": [
+    "prefer hot or warm food",
+    "pleasant taste"
+  ],
+  "rating": 4,
+  "helpful_no": 1,
+  "unhelpful_no": 3,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3c190b28dd377d35abf93"
+  },
+  "user_id": {
+    "$oid": "64c2050a4da82b53543d551c"
+  },
+  "review_images": [],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be84501b2bf4078488e89b"
+  },
+  "title": "I love to eat my veggies!",
+  "body": "Boiled veggies are nice. They suit well with the grilled meals, but a different approach to cooking the veggies could definitely elevate the taste of the meals. No longer need to add soy sauce on my veggies hahahahaha",
+  "date_posted": "2023-06-20T00:00:00.000Z",
+  "positive": false,
+  "review_keywords": [
+    "different approach to cooking veggies"
+  ],
+  "rating": 4,
+  "helpful_no": 1,
+  "unhelpful_no": 1,
+  "comments_no": 2,
+  "restaurant_id": {
+    "$oid": "64b3c190b28dd377d35abf93"
+  },
+  "user_id": {
+    "$oid": "64b78e81eb706995214e45a1"
+  },
+  "review_images": [
+    "reviews-images/sauce-veggies.jpg"
+  ],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be86921b2bf4078488e8b1"
+  },
+  "title": "Good enough snack",
+  "body": "One of the meriendas I usually eat in the campus. My favorite is Beef Pinatubo 💗 Just a good enough snack, fresh, with the right amount of filling. Although I have noticed that their serving size is getting small and smaller.",
+  "date_posted": "2023-06-03T00:00:00.000Z",
+  "positive": false,
+  "review_keywords": [
+    "fresh",
+    "right amount of filling",
+    "getting small"
+  ],
+  "rating": 4,
+  "helpful_no": 2,
+  "unhelpful_no": 3,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3c866b28dd377d35abf94"
+  },
+  "user_id": {
+    "$oid": "64b78f54eb706995214e45a2"
+  },
+  "review_images": [
+    "reviews-images/beef-pinatubo.jpg",
+    "reviews-images/beef-pinatubo1.jpg"
+  ],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be88711b2bf4078488e8b9"
+  },
+  "title": "All-time favorite snack",
+  "body": "I love eating fries.. theirs is my favorite snack of all-time. Just the perfect kind of crisp. I like the barbeque flavor.",
+  "date_posted": "2023-07-03T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "crispy"
+  ],
+  "rating": 5,
+  "helpful_no": 2,
+  "unhelpful_no": 0,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3db2ab28dd377d35abf97"
+  },
+  "user_id": {
+    "$oid": "64b78f54eb706995214e45a2"
+  },
+  "review_images": [
+    "reviews-images/barbecue.jpg"
+  ],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be89841b2bf4078488e8c0"
+  },
+  "title": "Great to eat for all potato lovers!",
+  "body": "Potato lover here! 😄 I tried the cheesy bacon potpots and fries, cheese flavor, and they do taste incredible. However, they got soggy too fast, which kind of ruined the experience for me.",
+  "date_posted": "2023-07-05T00:00:00.000Z",
+  "positive": false,
+  "review_keywords": [
+    "incredible taste",
+    "soggy"
+  ],
+  "rating": 4,
+  "helpful_no": 2,
+  "unhelpful_no": 0,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3db2ab28dd377d35abf97"
+  },
+  "user_id": {
+    "$oid": "64b78e81eb706995214e45a1"
+  },
+  "review_images": [
+    "reviews-images/cheese.jpg",
+    "reviews-images/cheesy-bacon.jpg"
+  ],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be8aff1b2bf4078488e8c7"
+  },
+  "title": "Quick Dessert",
+  "body": "First time I tried Aice.. I was surprised with the multiple flavours available. I wasn't able to pick one quick as much I was able to smash that dessert .😋 I ate the Chocolate Crispy one and it was delightful. Would surely buy again and try another flavour!",
+  "date_posted": "2023-06-26T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "multiple flavours",
+    "delightful"
+  ],
+  "rating": 5,
+  "helpful_no": 2,
+  "unhelpful_no": 3,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3d3bab28dd377d35abf96"
+  },
+  "user_id": {
+    "$oid": "64b7905aeb706995214e45a3"
+  },
+  "review_images": [],
+  "comments": [],
+  "review_videos": []
+},
+{
+  "_id": {
+    "$oid": "64be8ce61b2bf4078488e8cc"
+  },
+  "title": "Just the right amount of sweet",
+  "body": "The ice-cream was a craving satisfier, although it was not that creamy. I tried the Milk Melon one and found it a little bit watery. But the taste was bomb though, not that sweet, just fine. It is also affordable.",
+  "date_posted": "2023-06-28T00:00:00.000Z",
+  "positive": true,
+  "review_keywords": [
+    "not that creamy",
+    "craving satisfier"
+  ],
+  "rating": 4,
+  "helpful_no": 2,
+  "unhelpful_no": 1,
+  "comments_no": 0,
+  "restaurant_id": {
+    "$oid": "64b3d3bab28dd377d35abf96"
+  },
+  "user_id": {
+    "$oid": "64b79202eb706995214e45a4"
+  },
+  "review_images": [
+    "reviews-images/milk-melon.jpg",
+    "reviews-images/milk-melon2.jpg"
+  ],
+  "comments": [],
+  "review_videos": []
+}]

@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "64b78b8deb706995214e459a"
+  },
+  "username": "Rosé",
+  "password": "iloveblackpink",
+  "no_of_reviews": 2,
+  "avatar": "avatars/rose.jpg",
+  "description": "Just a girl in the city who is a foodie, and loves music:)"
+},
+{
+  "_id": {
+    "$oid": "64b78e81eb706995214e45a1"
+  },
+  "username": "taehyoongi",
+  "password": "se7enBtSV",
+  "no_of_reviews": 5,
+  "avatar": "avatars/v.jpg",
+  "description": "Niagara po po. Hello, I'm V from BS Computer Science. I like fashion, strictly not passion."
+},
+{
+  "_id": {
+    "$oid": "64b78f54eb706995214e45a2"
+  },
+  "username": "Enhani-ki",
+  "password": "maknaeNHA",
+  "no_of_reviews": 3,
+  "avatar": "avatars/niki.jpg",
+  "description": "Nishimura Riki. You can call me, Ni-ki. I want to show everyone that I can keep growing..while i EAT HEHE"
+},
+{
+  "_id": {
+    "$oid": "64b7905aeb706995214e45a3"
+  },
+  "username": "IU",
+  "password": "leejongSUKlover",
+  "no_of_reviews": 1,
+  "avatar": "avatars/iu.jpg",
+  "description": "I'm IU and I love u!"
+},
+{
+  "_id": {
+    "$oid": "64b79202eb706995214e45a4"
+  },
+  "username": "ChouTzuyu",
+  "password": "ttwwiiccee55",
+  "no_of_reviews": 6,
+  "avatar": "avatars/tzuyu.jpg",
+  "description": "uWuuu I'm Chou-Tzuyu from BS Marketing Management."
+},
+{
+  "_id": {
+    "$oid": "64c2050a4da82b53543d551c"
+  },
+  "username": "MOMO",
+  "password": "HareHare",
+  "no_of_reviews": 2,
+  "avatar": "avatars/MOMO.jpg",
+  "description": "Welcome to MOMO's land!"
+}]

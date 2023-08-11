@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "64b7ab36eb706995214e45c9"
+  },
+  "content": "True enough! I love the food here.",
+  "date_commented": "2023-05-21T00:00:00.000Z",
+  "review_id": {
+    "$oid": "64b796a7eb706995214e45ae"
+  },
+  "user_id": {
+    "$oid": "64b7905aeb706995214e45a3"
+  }
+},
+{
+  "_id": {
+    "$oid": "64be81701b2bf4078488e88a"
+  },
+  "content": "Underrated tbh.. the best honey lemon juice in DLSU for real 😚",
+  "date_commented": "2023-07-02T00:00:00.000Z",
+  "review_id": {
+    "$oid": "64be7f621b2bf4078488e882"
+  },
+  "user_id": {
+    "$oid": "64b78f54eb706995214e45a2"
+  }
+},
+{
+  "_id": {
+    "$oid": "64be852a1b2bf4078488e8a0"
+  },
+  "content": "Great suggestion hahahaha 😁",
+  "date_commented": "2023-06-21T00:00:00.000Z",
+  "review_id": {
+    "$oid": "64be84501b2bf4078488e89b"
+  },
+  "user_id": {
+    "$oid": "64b78b8deb706995214e459a"
+  }
+},
+{
+  "_id": {
+    "$oid": "64be85d61b2bf4078488e8aa"
+  },
+  "content": "I feel like the boiled veggies are good..but yeah, they could add more seasoning to it",
+  "date_commented": "2023-06-22T00:00:00.000Z",
+  "review_id": {
+    "$oid": "64be84501b2bf4078488e89b"
+  },
+  "user_id": {
+    "$oid": "64b7905aeb706995214e45a3"
+  }
+}]
