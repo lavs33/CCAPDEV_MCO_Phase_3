@@ -34,9 +34,5 @@ Install the required dependencies using npm command (npm install)
 
 #### Running the App
 
-To start the application, run the following command: npm start.
-The Node.js server will start, and the application will be accessible at http://localhost:3000 in your web browser.
-
-
-
+To start the application through the deployment, the link is https://taftfinds-l9gh.onrender.com.
 
